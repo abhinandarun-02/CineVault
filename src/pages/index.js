@@ -12,7 +12,7 @@ export default function Home() {
       {
         genreArray.map((genre) =>(
           <div>
-            <a href="/testpg" target="_blank">
+            <a href={genre.link} target="_blank">
                 <img width="250px" height="250px" className="card-img-top" src={genre.image} alt={genre.alt} />
             </a>
             <p >{genre.message}</p>
