@@ -2,4 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Questrial';
+  src: url('../fonts/Questrial-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+  }
 
+
+.parent-homepage{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    font-family: 'Questrial','sans';
+}
+
+.genre-category{
+  display: grid;
+  grid-template-columns: 20% 78% 2%;
+}
+
+.genre-category:hover{
+  color:#8685ef;
+}
+
+.genre-category .svg{
+  fill:grey;
+  stroke: grey;
+  stroke-width: 1px;
+}
+.genre-category:hover .svg{
+  fill:#8685ef;
+  stroke: #8685ef;
+}
