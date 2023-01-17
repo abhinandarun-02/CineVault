@@ -34,3 +34,62 @@
   fill:#8685ef;
   stroke: #8685ef;
 }
+
+.top-bar{
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.search-bar{
+  display: grid;
+  grid-template-columns: 10% 90%;
+  align-items: center;
+}
+
+.username{
+  display: grid;
+  column-gap: 10%;
+  grid-template-columns: 20% 70%;
+  align-items: center;
+}
+
+.slideshow{
+  transition: all ease-in-out 2s;
+
+}
+.slideshow:hover{
+  transition: all ease-in-out 2s;
+}
+
+.slideshow .info{
+  animation: disappear 0.7s ease-in-out;
+  visibility: hidden;
+  background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(54, 53, 53));
+  transition: all ease-in-out 0.7s;
+}
+.slideshow:hover .info{
+  display: flex;
+  visibility: visible;
+  background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(54, 53, 53));
+  animation: appear 0.7s ease-in-out;
+}
+
+@keyframes appear {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  from {
+      opacity: 1;
+  }
+
+  to {
+      opacity: 0;
+  }
+}
