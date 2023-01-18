@@ -63,15 +63,35 @@
 
 .slideshow .info{
   animation: disappear 0.7s ease-in-out;
+  z-index: 2;
   visibility: hidden;
   background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(54, 53, 53));
   transition: all ease-in-out 0.7s;
 }
+
+.slideshow .more-details{
+  animation: disappear 0.7s ease-in-out;
+  z-index: 2;
+  visibility: hidden;
+  transition: all ease-in-out 0.5s;
+}
+
+.slideshow:hover .more-details{
+  visibility: visible;
+  z-index: 2;
+  animation: appear 0.7s ease-in-out;
+}
+
 .slideshow:hover .info{
   display: flex;
   visibility: visible;
+  z-index: 2;
   background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(54, 53, 53));
   animation: appear 0.7s ease-in-out;
+}
+
+.poster-show{
+  z-index: 1;
 }
 
 @keyframes appear {
