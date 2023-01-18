@@ -113,3 +113,19 @@
       opacity: 0;
   }
 }
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+.card-parent{
+  display: grid;
+  grid-template-rows: 90% 1% 9%;
+}
+.card-parent{
+  transition: all ease-in-out 0.5s;
+}
+.card-parent:hover{
+  transform: scale(1.05);
+  transition: all ease-in-out 0.5s;
+}

@@ -97,11 +97,11 @@ const Slideshow = () => {
             {/* Controls for Slideshow */}
             <span className="controls z-20 absolute flex flex-row items-center justify-center h-[10%] w-[10%] right-10 bottom-10 ">
                 <button className="prev active:scale-75 transition-all duration-200" onClick={()=>{ prev() }}>
-                    <RxChevronLeft size={20} color={"white"}/>
+                    <RxChevronLeft size={40} color={"white"}/>
                 </button>
-                <div className="line"><RxDividerVertical size={32} color={"white"}/></div>
+                <div className="line"><RxDividerVertical size={50} color={"white"}/></div>
                 <button className="next active:scale-75 transition-all duration-200" onClick={()=>{ next() }}>
-                    <RxChevronRight size={20} color={"white"}/>
+                    <RxChevronRight size={40} color={"white"}/>
                 </button>
             </span>
             {/* Movie Details */}
@@ -122,7 +122,6 @@ const Slideshow = () => {
                 <button className="more-details h-[12%] w-[20%] rounded-2xl bg-[#8685ef] active:scale-75">Details</button>
             </div>
             {/* image poster  */}
-            
             <div className="poster-show absolute top-0 left-0 h-[100%] w-[100%] bg-gray-700 rounded-2xl overflow-hidden">
                 {
                     <AnimatePresence initial={false} custom={direction}>
@@ -141,7 +140,6 @@ const Slideshow = () => {
                             x: { type: "spring", stiffness: 300, damping: 30 },
                             opacity: { duration: 0.2 }
                         }}
-                        
                     />
                     </AnimatePresence>
                 }
