@@ -205,6 +205,30 @@
 
 .homepage-mobile{
   display: grid;
-  grid-template-rows: 10% 45% 45%;
+  grid-template-rows: 10% 40% 60%;
+  grid-template-columns: 100%;
+  scrollbar-width: 0px;
   font-family: 'Questrial','sans';
+}
+.title-bar{
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+.search-bar-mobile{
+  display: grid;
+  grid-template-columns: 90% 10%;
+  align-items: center;
+}
+.poster-mobile{
+  min-width: 500px;
+  min-height: 300px;
+  width: auto;
+  height: auto;
+}
+.cards-mobile{
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: 0px;
 }

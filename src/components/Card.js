@@ -2,7 +2,7 @@ import { AiFillStar } from "react-icons/ai";
 
 const Cards = ({name,rating,img,id}) => {
     return ( 
-        <div className="card-parent mr-[2%] h-[95%] max-h-[400px] w-[17%] min-w-[250px] rounded-2xl">
+        <div className="card-parent lg:mr-[2%] mr-[3%] h-[95%] lg:max-h-[400px] max-h-[325px] w-[17%] lg:min-w-[250px] min-w-[200px] rounded-2xl">
             <img src={img} alt={id+" poster"} className="poster overflow-hidden rounded-2xl h-[100%] w-[100%] object-fill" />
             <br />
             <div className="movie-details pl-[2%] text-white font-bold flex flex-col">

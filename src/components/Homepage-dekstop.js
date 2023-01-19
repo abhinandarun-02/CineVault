@@ -109,31 +109,31 @@ return (
 {/* Main Content */}
     <div className="main-content h-full bg-[#252525] col-start-2 col-span-4 overflow-y-scroll scrollbar">
         <div className="top-bar justify-center items-center h-[7%] w-[100%]">
-        <div className="search-bar bg-[#393939] w-[75%] h-[80%] ml-[7%] pl-5 rounded-3xl" >
-            <BsSearch />
-            <input type="text" className=' outline-none bg-transparent text-gray-400 h-[100%]' placeholder='Search for movies' />
-        </div>
-        <div className="username bg-[#393939] w-[75%] h-[80%] ml-10 rounded-3xl flex-wrap">
-            <img src="/cinevault-logo-img.png" alt="profile-pic" className="profile-pic h-[75%] w-[75%] bg-[#252525] object-scale-down rounded-full justify-self-center" />
-            <div className="user-profile-name text-white">A Free Demo User</div>
-        </div>
+            <div className="search-bar bg-[#393939] w-[75%] h-[80%] ml-[7%] pl-5 rounded-3xl" >
+                <BsSearch />
+                <input type="text" className=' outline-none bg-transparent text-gray-400 h-[100%]' placeholder='Search for movies' />
+            </div>
+            <div className="username bg-[#393939] w-[75%] h-[80%] ml-10 rounded-3xl flex-wrap">
+                <img src="/cinevault-logo-img.png" alt="profile-pic" className="profile-pic h-[75%] w-[75%] bg-[#252525] object-scale-down rounded-full justify-self-center" />
+                <div className="user-profile-name text-white">A Free Demo User</div>
+            </div>
         </div>
 
         <h1 className="title text-white pl-[5%] mt-[3%] text-lg font-bold">Featured Movies</h1>
         <div className="slide-show flex justify-center items-center h-[40%] w-[100%] animate glow delay-2">
-        <Slideshow />
+            <Slideshow />
         </div>
         <br></br>
         <div className="popular-movies  flex flex-col h-[60%] w-[100%]">
-        <h1 className="title pl-[5%] text-white text-lg font-bold">Most Popular Movies</h1>
-        <br></br>
-        <div className="cards h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 overflow-x-scroll scrollbar">
-            {
-            posterArray.map((poster)=>(
-                <Card name={poster.name} rating={poster.rating} img={poster.poster} key={poster.id} />
-            ))
-            }
-        </div>
+            <h1 className="title pl-[5%] text-white text-lg font-bold">Most Popular Movies</h1>
+            <br></br>
+            <div className="cards h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 overflow-x-scroll scrollbar">
+                {
+                posterArray.map((poster)=>(
+                    <Card name={poster.name} rating={poster.rating} img={poster.poster} key={poster.id} />
+                ))
+                }
+            </div>
         </div>
     </div>
    </div>
