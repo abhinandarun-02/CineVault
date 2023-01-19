@@ -1,13 +1,12 @@
-import Image from "next/image";
-
 function Movie() {
   return (
     <div className="wrapper w-full max-w-[2100px] mx-auto">
-      <div className="w-full mx-auto app-container">
+      <div className="relative w-full mx-auto app-container">
         <div className="cover-image"></div>
-        <main className="movie-details z-20 w-full">
-          <div className="section-1 text-center">
-            <div className="movie-container w-[250px] mx-auto">
+        <div className="gradient absolute top-[400px] w-full h-[200px] z-10"></div>
+        <main className="movie-details absolute top-[450px] z-20 w-full">
+          <div className="section-1 relative text-center">
+            <div className="movie-container absolute inset-0 -top-10 w-[250px] mx-auto">
               <div className="movie-poster">
                 <img
                   className="w-full rounded-xl"
