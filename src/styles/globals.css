@@ -47,7 +47,7 @@ li {
 /* LAYOUT */
 .movie-details {
   display: grid;
-  grid-template-areas: "c1 c2 c3" ". c4 .";
+  grid-template-areas: "c1 c2 c3" ". c4 c3";
   grid-template-rows: auto auto;
   grid-template-columns: 25% auto 30%;
 }
