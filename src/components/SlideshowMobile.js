@@ -95,7 +95,7 @@ const SlideshowMobile = () => {
     return ( 
         <div className="slideshow relative h-[70%] w-[90%] bg-black rounded-2xl ml-[5%]">
             {/* Controls for Slideshow */}
-            <span className="controls z-20 absolute flex flex-row items-center justify-center h-[10%] w-[10%] right-[17%] bottom-[5%] ">
+            <span className="controls z-[4] absolute flex flex-row items-center justify-center h-[10%] w-[10%] right-[17%] bottom-[5%] ">
                 <button className="prev active:scale-75 transition-all duration-200" onClick={()=>{ prev() }}>
                     <RxChevronLeft size={20} color={"white"} />
                 </button>

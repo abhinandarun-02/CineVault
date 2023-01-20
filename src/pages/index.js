@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className='bg-[#252525]'>
       {size.width>=1000 && <HomepageDesktop/>}
-      {size.width<1000 && <HomepageMobile/>}
+      {size.width<1000 && <HomepageMobile width={size.width}/>}
     </div>
   );
 }
