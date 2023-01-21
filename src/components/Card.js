@@ -2,10 +2,10 @@ import { AiFillStar } from "react-icons/ai";
 
 const Cards = ({name,rating,img,id}) => {
     return ( 
-        <div className="card-parent lg:mr-[2%] mr-[3%] h-[95%] lg:max-h-[400px] max-h-[325px] w-[17%] lg:min-w-[250px] min-w-[200px] rounded-2xl">
+        <div className="card-parent lg:mr-[2%] mr-[20px] h-[95%] lg:max-h-[400px] max-h-[325px] w-[17%] lg:min-w-[250px] min-w-[200px] rounded-2xl">
             <img src={img} alt={id+" poster"} className="poster overflow-hidden rounded-2xl h-[100%] w-[100%] object-fill" />
             <br />
-            <div className="movie-details pl-[2%] text-white font-bold flex flex-col">
+            <div className="movie-details-homepage pl-[2%] text-white font-bold flex flex-col">
                 <h1 className="name">{name}</h1>
                 <div className="rating flex flex-row items-center">
                     <AiFillStar color="#00c896"/>
