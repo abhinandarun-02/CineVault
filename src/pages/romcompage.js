@@ -22,10 +22,11 @@ function romcompage() {
             </a>
             <p>{mvlst.desc}</p>
           </div>
+))}
         </div>
-      </div>
-    </div>
+        
   );
+        
 }
 
 export default romcompage;
