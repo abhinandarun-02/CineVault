@@ -112,6 +112,7 @@ const HomepageMobile = ({width}) => {
                 <a
                   href="https://www.facebook.com/petrichor.iitpkd"
                   target={"_blank"}
+                  rel="noreferrer"
                   className="mr-[7%] hover:text-[#8685ef] transition-colors duration-300 cursor-pointer"
                 >
                   <BsFacebook />
@@ -119,6 +120,7 @@ const HomepageMobile = ({width}) => {
                 <a
                   href="https://instagram.com/petrichor.iitpkd?igshid=MDM4ZDc5MmU="
                   target={"_blank"}
+                  rel="noreferrer"
                   className="hover:text-[#8685ef] transition-colors duration-300 cursor-pointer"
                 >
                   <BsInstagram />
