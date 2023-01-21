@@ -254,7 +254,7 @@ li {
 }
 .search-bar-mobile{
   display: grid;
-  grid-template-columns: 50px minmax(10px,500px) 50px;
+  grid-template-columns: 50px minmax(10px,1500px) 50px;
   align-items: center;
   justify-content: start;
 }

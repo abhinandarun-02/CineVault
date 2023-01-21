@@ -1,42 +1,122 @@
 export const hrrorlst = [
     {
-        "id":"thg",
+        "id":"1",
         "location": "",
         "image": "https://images-na.ssl-images-amazon.com/images/I/61Mf%2B-TcV8L.jpg",
+        "hovimg":"https://media.tenor.com/KO1t-ZbEvhwAAAAC/the-thing.gif",
         "alt": "thing",
-        "title":"5.The Thing",
-        "desc":"A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims."
+        "title":"The Thing",
+        "imdb":"8.2/10",
+        "dirctr":"John Carpenter",
+        "year":"1982",
+        "desc":"A tragic incident forces Anirudh, a middle-aged man, to take a trip down memory lane and reminisce his college days along with his friends, who were labelled as losers."
     },
     {
-        "id":"tbd",
+        "id":"2",
         "location": "",
         "image": "https://st1.bollywoodlife.com/wp-content/uploads/2018/07/tumbbad.png",
+        "hovimg":"https://media.tenor.com/GZyVgh0eRfgAAAAd/tumbbad.gif",
         "alt": "tumbbad",
-        "title":"4.Tumbbad",
-        "desc":"A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims."
+        "title":"Tumbbad",
+        "imdb":"8.2/10",
+        "dirctr":"Rahi Anil Barve", 
+        "year":"2018",
+        "desc":"This classic story of love, tragedy and hope centers around a homeless tramp whom meets and instantly falls in love with a beautiful, albeit blind, flower seller."
     },
     {
-        "id":"shg",
+        "id":"3",
         "location": "",
         "image": "https://alternativemovieposters.com/wp-content/uploads/2022/10/Stella-Ygris_Shining.jpg",
+        "hovimg":"https://j.gifs.com/VOm98v.gif",
         "alt": "shining",
-        "title":"3.The Shining",
-        "desc":"A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims."
+        "title":"The Shining",
+        "imdb":"8.4/10",
+        "dirctr":"Stanley Kubrick",  
+        "year":"1980",
+        "desc":"This comedic masterpiece finds the iconic Little Tramp (Charlie Chaplin) employed at a state-of-the-art factory where the inescapable machinery completely overwhelms him, and where various mishaps keep getting him sent to prison."
     },
     {
-        "id":"psy",
+        "id":"4",
         "location": "",
         "image": "https://i.etsystatic.com/21420603/r/il/81fd11/2782690640/il_fullxfull.2782690640_nn4r.jpg",
+        "hovimg":"https://media.tenor.com/H2YdMwMzKQ8AAAAC/psycho.gif",
         "alt": "psycho",
-        "title":"2.Psycho",
-        "desc":"A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims."
+        "title":"Psycho",
+        "imdb":"8.5/10",
+        "dirctr":"Alfred Hitchcock", 
+        "year":"1960",
+        "desc":"A gentle Jewish-Italian waiter, Guido Orefice (Roberto Benigni), meets Dora (Nicoletta Braschi), a pretty schoolteacher, and wins her over with his charm and humor. Eventually they marry and have a son, Giosue (Giorgio Cantarini)."
     },
     {
-        "id":"aln",
+        "id":"5",
         "location": "",
         "image": "https://i.pinimg.com/originals/03/5a/1e/035a1e61ba9e4b1fd767bf8066c6f45e.jpg",
+        "hovimg":"https://i.pinimg.com/originals/af/fa/c2/affac24f6893436b051800fd8ded8c25.gif",
         "alt": "Alien",
-        "title":"1.Alien",
-        "desc":"A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims."
+        "title":"Alien",
+        "imdb":"8.5/10",
+        "dirctr":"Ridley Scott",  
+        "year":"1979",
+        "desc":"Slow-witted Forrest Gump (Tom Hanks) has never thought of himself as disadvantaged, and thanks to his supportive mother (Sally Field), he leads anything but a restricted life."
+    },
+    {
+        "id":"6",
+        "location": "",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61Mf%2B-TcV8L.jpg",
+        "hovimg":"https://media.tenor.com/KO1t-ZbEvhwAAAAC/the-thing.gif",
+        "alt": "thing",
+        "title":"The Thing",
+        "imdb":"8.2/10",
+        "dirctr":"John Carpenter",
+        "year":"1982",
+        "desc":"A tragic incident forces Anirudh, a middle-aged man, to take a trip down memory lane and reminisce his college days along with his friends, who were labelled as losers."
+    },
+    {
+        "id":"7",
+        "location": "",
+        "image": "https://st1.bollywoodlife.com/wp-content/uploads/2018/07/tumbbad.png",
+        "hovimg":"https://media.tenor.com/GZyVgh0eRfgAAAAd/tumbbad.gif",
+        "alt": "tumbbad",
+        "title":"Tumbbad",
+        "imdb":"8.2/10",
+        "dirctr":"Rahi Anil Barve", 
+        "year":"2018",
+        "desc":"This classic story of love, tragedy and hope centers around a homeless tramp whom meets and instantly falls in love with a beautiful, albeit blind, flower seller."
+    },
+    {
+        "id":"8",
+        "location": "",
+        "image": "https://alternativemovieposters.com/wp-content/uploads/2022/10/Stella-Ygris_Shining.jpg",
+        "hovimg":"https://j.gifs.com/VOm98v.gif",
+        "alt": "shining",
+        "title":"The Shining",
+        "imdb":"8.4/10",
+        "dirctr":"Stanley Kubrick",  
+        "year":"1980",
+        "desc":"This comedic masterpiece finds the iconic Little Tramp (Charlie Chaplin) employed at a state-of-the-art factory where the inescapable machinery completely overwhelms him, and where various mishaps keep getting him sent to prison."
+    },
+    {
+        "id":"9",
+        "location": "",
+        "image": "https://i.etsystatic.com/21420603/r/il/81fd11/2782690640/il_fullxfull.2782690640_nn4r.jpg",
+        "hovimg":"https://media.tenor.com/H2YdMwMzKQ8AAAAC/psycho.gif",
+        "alt": "psycho",
+        "title":"Psycho",
+        "imdb":"8.5/10",
+        "dirctr":"Alfred Hitchcock", 
+        "year":"1960",
+        "desc":"A gentle Jewish-Italian waiter, Guido Orefice (Roberto Benigni), meets Dora (Nicoletta Braschi), a pretty schoolteacher, and wins her over with his charm and humor. Eventually they marry and have a son, Giosue (Giorgio Cantarini)."
+    },
+    {
+        "id":"10",
+        "location": "",
+        "image": "https://i.pinimg.com/originals/03/5a/1e/035a1e61ba9e4b1fd767bf8066c6f45e.jpg",
+        "hovimg":"https://i.pinimg.com/originals/af/fa/c2/affac24f6893436b051800fd8ded8c25.gif",
+        "alt": "Alien",
+        "title":"Alien",
+        "imdb":"8.5/10",
+        "dirctr":"Ridley Scott",  
+        "year":"1979",
+        "desc":"Slow-witted Forrest Gump (Tom Hanks) has never thought of himself as disadvantaged, and thanks to his supportive mother (Sally Field), he leads anything but a restricted life."
     }
 ]
