@@ -105,21 +105,21 @@ const SlideshowMobile = () => {
                 </button>
             </span>
             {/* Movie Details */}
-            <div className="info absolute top-0 left-0 flex flex-col justify-center pl-[12%] text-white h-[100%] w-[80%] rounded-tl-2xl rounded-bl-2xl rounded-br-md rounded-tr-md">
+            <div className="info absolute top-0 left-0 flex flex-col justify-center pl-[12%] text-white h-[100%] w-[100%] rounded-tl-2xl rounded-bl-2xl rounded-br-md rounded-tr-md">
                 <h1 className="title text-3xl font-extrabold">
                     {posterArray[index].title}
                 </h1>
                 <p className="tagline text-gray-300 pl-[2%] text-sm">{posterArray[index].tagline}</p>
                 <br></br>
-                <div className="movie-details flex flex-row w-[60%] text-lg">
-                    <h4 className="year-of-release text-gray-300 pl-[2%]">{posterArray[index].year}</h4>
-                    <div className="rating flex flex-row ml-[24%]">
+                <div className="movie-details-homepage flex flex-row w-[80%] items-center ">
+                    <h4 className="year-of-release text-gray-300 ">{posterArray[index].year}</h4>
+                    <div className="rating flex flex-row ml-[10px]">
                         <ImdbLogo height={25} width={25} />
                         <p className="ml-[12%]">{posterArray[index].rating}/10</p>
                     </div>
                 </div>
                 <br></br>
-                <button className="more-details h-[12%] w-[30%] max-w-[90px] rounded-lg bg-[#8685ef] active:scale-75">Details</button>
+                <button className="more-details h-[12%] w-[30%] max-w-[90px] rounded-lg bg-[#8685ef] active:scale-75 sm:text-lg text-sm">Details</button>
             </div>
             {/* image poster  */}
             <div className="poster-show absolute top-0 left-0 h-[100%] w-[100%] bg-gray-700 rounded-2xl overflow-hidden">

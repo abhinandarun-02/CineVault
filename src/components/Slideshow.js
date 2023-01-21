@@ -106,12 +106,12 @@ const Slideshow = () => {
             </span>
             {/* Movie Details */}
             <div className="info absolute top-0 left-0 flex flex-col justify-center pl-[12%] text-white h-[100%] w-[60%] rounded-tl-2xl rounded-bl-2xl rounded-br-md rounded-tr-md">
-                <h1 className="title text-4xl font-extrabold">
+                <h1 className="title text-4xl 2xl:text-6xl font-extrabold">
                     {posterArray[index].title}
                 </h1>
-                <p className="tagline text-gray-300 pl-[2%]">{posterArray[index].tagline}</p>
+                <p className="tagline text-gray-300 pl-[2%] 2xl:text-2xl">{posterArray[index].tagline}</p>
                 <br></br>
-                <div className="movie-details flex flex-row w-[60%] text-lg">
+                <div className="movie-details-homepage flex flex-row w-[60%] 2xl:text-2xl text-lg">
                     <h4 className="year-of-release text-gray-300 pl-[2%]">{posterArray[index].year}</h4>
                     <div className="rating flex flex-row ml-[24%]">
                         <ImdbLogo height={25} width={25} />
@@ -119,7 +119,7 @@ const Slideshow = () => {
                     </div>
                 </div>
                 <br></br>
-                <button className="more-details h-[12%] w-[20%] rounded-2xl bg-[#8685ef] active:scale-75">Details</button>
+                <button className="more-details h-[12%] w-[20%] rounded-2xl bg-[#8685ef] active:scale-75 2xl:text-2xl">Details</button>
             </div>
             {/* image poster  */}
             <div className="poster-show absolute top-0 left-0 h-[100%] w-[100%] bg-gray-700 rounded-2xl overflow-hidden">
