@@ -2,4 +2,230 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Questrial';
+  src: url('../fonts/Questrial-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+  }
 
+
+/* HOMEPAGE DESKTOP */
+
+.parent-homepage{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    font-family: 'Questrial','sans';
+}
+
+.genre-category{
+  display: grid;
+  grid-template-columns: 20% 78% 2%;
+}
+
+.genre-category:hover{
+  color:#8685ef;
+}
+
+.genre-category .svg{
+  fill:grey;
+  stroke: grey;
+  stroke-width: 1px;
+}
+.genre-category:hover .svg{
+  fill:#8685ef;
+  stroke: #8685ef;
+}
+
+.top-bar{
+  display: grid;
+  grid-template-columns: 70% 10% 20%;
+}
+
+.search-bar{
+  display: grid;
+  grid-template-columns: 10% 90%;
+  align-items: center;
+}
+
+.slideshow{
+  transition: all ease-in-out 2s;
+
+}
+.slideshow:hover{
+  transition: all ease-in-out 2s;
+}
+
+.slideshow .info{
+  animation: disappear 0.7s ease-in-out;
+  z-index: 2;
+  visibility: hidden;
+  background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(54, 53, 53));
+  transition: all ease-in-out 0.7s;
+}
+
+.slideshow .more-details{
+  animation: disappear 0.7s ease-in-out;
+  z-index: 2;
+  visibility: hidden;
+  transition: all ease-in-out 0.5s;
+}
+
+.slideshow:hover .more-details{
+  visibility: visible;
+  z-index: 2;
+  animation: appear 0.7s ease-in-out;
+}
+
+.slideshow:hover .info{
+  display: flex;
+  visibility: visible;
+  z-index: 2;
+  background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(54, 53, 53));
+  animation: appear 0.7s ease-in-out;
+}
+
+.poster-show{
+  z-index: 1;
+}
+
+@keyframes appear {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  from {
+      opacity: 1;
+  }
+
+  to {
+      opacity: 0;
+  }
+}
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: transparent;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #252525;
+    border-radius: 100vh;
+    border: 3px solid #525151;
+  }
+}
+
+.cards{
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.card-parent{
+  display: grid;
+  grid-template-rows: 90% 1% 9%;
+}
+.card-parent{
+  transition: all ease-in-out 0.5s;
+}
+.card-parent:hover{
+  transform: scale(1.05);
+  transition: all ease-in-out 0.5s;
+}
+
+.animate {
+  animation-duration: 0.75s;
+  animation-delay: 0.5s;
+  animation-name: animate-fade;
+  animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+  animation-fill-mode: backwards;
+}
+
+/* Glow In */
+.animate.glow {
+  animation-name: animate-glow;
+  animation-timing-function: ease;
+}
+
+@keyframes animate-glow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.animate.pop {
+  animation-name: animate-pop;
+  animation-timing-function: cubic-bezier(.26,.53,.74,1.48);
+}
+
+@keyframes animate-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+  }
+        
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+.delay-1 {
+  animation-delay: 0.3s;
+}
+.delay-2 {
+  animation-delay: 0.4s;
+}
+.delay-3 {
+  animation-delay: 0.7s;
+}
+
+
+/* HOMEPAGE MOBILE */
+
+.homepage-mobile{
+  display: grid;
+  grid-template-rows: 10% 40% 60%;
+  grid-template-columns: 100%;
+  scrollbar-width: 0px;
+  font-family: 'Questrial','sans';
+}
+.title-bar{
+  display: grid;
+  grid-template-columns: 20% 68% 12%;
+}
+.search-bar-mobile{
+  display: grid;
+  grid-template-columns: 50px minmax(10px,500px) 50px;
+  align-items: center;
+  justify-content: start;
+}
+.poster-mobile{
+  min-width: 500px;
+  min-height: 300px;
+  width: auto;
+  height: auto;
+}
+.cards-mobile{
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: 0px;
+}
+.menu{
+  background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(54, 53, 53));
+}
