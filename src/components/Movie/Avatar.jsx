@@ -1,6 +1,6 @@
 function Avatar({name, char, img}) {
   return (
-    <li className="avatar flex items-center gap-5">
+    <li className="avatar flex items-center gap-5 shrink-0">
       <img
         className="w-[75px] h-[75px] rounded-full"
         src={img}
