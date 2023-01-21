@@ -12,7 +12,7 @@ export const genreArray = [
         "location": "",
         "image": "https://media.istockphoto.com/id/875970634/vector/romantic-film-glyphs-vector-icon.jpg?s=612x612&w=0&k=20&c=s5BrM29Vxgtc9FI3yxT56XCSsSzYq1U18uxTjnkZnc0=",
         "alt": "Romantic Comedy Generic Image",
-        "message":"Romantic-Comedy",
+        "message":"Rom - Com",
         "link":"/romcompage"
     },
     {
