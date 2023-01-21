@@ -21,45 +21,8 @@ function returnSVG(id){
     }
   }
 
-const HomepageDesktop = () => {
-    const posterArray = [
-        {
-          id:"your-name",
-          poster:"/your-name-vertical-poster.jpg",
-          name:"Your Name (Kimi no Na wa)",
-          rating: 8.4
-        },
-        {
-          id: "dark-knight-rises",
-          poster:"/dark-knight-rises.jpg",
-          name:"Batman: The Dark Knight Rises",
-          rating: 8.4
-        },
-        {
-          id: 'into-the-spiderverse',
-          poster:"/spiderman-verical-spiderverse.jpg",
-          name:"Spiderman: Into the Spiderverse",
-          rating: 8.4
-        },
-        {
-          id:"inception",
-          poster:"/inception-vertical-poster.jpeg",
-          name:"Inception",
-          rating: 8.8
-        },
-        {
-          id: 'into-the-spiderverse-1',
-          poster:"/spiderman-verical-spiderverse.jpg",
-          name:"Spiderman: Into the Spiderverse",
-          rating: 8.4
-        },
-        {
-            id:"your-name-1",
-            poster:"/your-name-vertical-poster.jpg",
-            name:"Your Name (Kimi no Na wa)",
-            rating: 8.4
-          },
-      ]
+const HomepageDesktop = ({movies}) => {
+
       const router  = useRouter()
 return ( 
     <div className='parent-homepage  h-[100vh] w-[100%] grid-row-1 text-[#686262] bg-[#252525] '>
@@ -130,8 +93,8 @@ return (
                 <br></br>
                 <div className="cards h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 overflow-x-scroll scrollbar">
                     {
-                    posterArray.map((poster)=>(
-                        <Card name={poster.name} rating={poster.rating} img={poster.poster} key={poster.id} />
+                    movies.results.map((movie)=>(
+                        <Card name={movie.original_title} rating={movie.vote_average} img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} key={movie.id} />
                     ))
                     }
                 </div>
