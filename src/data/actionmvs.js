@@ -1,42 +1,122 @@
 export const actionlst = [
     {
-        "id":"thg",
+        "id":"1",
         "location": "",
-        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3d/Chhichhore_Poster.jpg/220px-Chhichhore_Poster.jpg",
+        "image": "https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+        "hovimg":"https://media.tenor.com/mbix0vEvGrQAAAAC/empire-strikes.gif",
         "alt": "thing",
-        "title":"5.The Thing",
-        "desc":"A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims."
+        "title":"Star Wars: The Empire Strikes Back",
+        "imdb":"8.7/10",
+        "dirctr":"Irvin Kershner",
+        "year":"1980",
+        "desc":"A tragic incident forces Anirudh, a middle-aged man, to take a trip down memory lane and reminisce his college days along with his friends, who were labelled as losers."
     },
     {
-        "id":"tbd",
+        "id":"2",
         "location": "",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/0/09/City_Lights_%281931_theatrical_poster_-_retouched%29.jpg",
+        "image": "https://flxt.tmsimg.com/assets/p22804_p_v8_av.jpg",
+        "hovimg":"https://media.tenor.com/gw1yNsaFmlMAAAAC/matrix-neo.gif",
         "alt": "tumbbad",
-        "title":"4.Tumbbad",
-        "desc":"A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims."
+        "title":"The Matrix",
+        "imdb":"8.5/10",
+        "dirctr":"Lana Wachowski, Lilly Wachowski", 
+        "year":"1999",
+        "desc":"This classic story of love, tragedy and hope centers around a homeless tramp whom meets and instantly falls in love with a beautiful, albeit blind, flower seller."
     },
     {
-        "id":"shg",
+        "id":"3",
         "location": "",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/3/36/Modern_Times_poster.jpg",
+        "image": "https://m.media-amazon.com/images/M/MV5BMjExMjkwNTQ0Nl5BMl5BanBnXkFtZTcwNTY0OTk1Mw@@._V1_.jpg",
+        "hovimg":"https://thumbs.gfycat.com/NervousVigorousBuck-size_restricted.gif",
         "alt": "shining",
-        "title":"3.The Shining",
-        "desc":"A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims."
+        "title":"Inception",
+        "imdb":"8.8/10",
+        "dirctr":"Christopher Nolan", 
+        "year":"2010",
+        "desc":"This comedic masterpiece finds the iconic Little Tramp (Charlie Chaplin) employed at a state-of-the-art factory where the inescapable machinery completely overwhelms him, and where various mishaps keep getting him sent to prison."
     },
     {
-        "id":"psy",
+        "id":"4",
         "location": "",
-        "image": "https://upload.wikimedia.org/wikipedia/en/7/7c/Vitaebella.jpg",
+        "image": "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+        "hovimg":"https://media.tenor.com/Mw-8wYa0UNsAAAAd/theoden-king.gif",
         "alt": "psycho",
-        "title":"2.Psycho",
-        "desc":"A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims."
+        "title":"The Lord of the Rings: The Return of the King",
+        "imdb":"9.0/10",
+        "dirctr":"Peter Jackson", 
+        "year":"2003",
+        "desc":"A gentle Jewish-Italian waiter, Guido Orefice (Roberto Benigni), meets Dora (Nicoletta Braschi), a pretty schoolteacher, and wins her over with his charm and humor. Eventually they marry and have a son, Giosue (Giorgio Cantarini)."
     },
     {
-        "id":"aln",
+        "id":"5",
         "location": "",
-        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Forrest_Gump_poster.jpg/220px-Forrest_Gump_poster.jpg",
+        "image": "https://flxt.tmsimg.com/assets/p173378_p_v8_au.jpg",
+        "hovimg":"https://media.tenor.com/Jaq6GGy6yWEAAAAC/the-dark-knight-joker.gif",
         "alt": "Alien",
-        "title":"1.Alien",
-        "desc":"A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims."
+        "title":"The Dark Knight",
+        "imdb":"9.0/10",
+        "dirctr":"Christopher Nolan", 
+        "year":"2008",
+        "desc":"Slow-witted Forrest Gump (Tom Hanks) has never thought of himself as disadvantaged, and thanks to his supportive mother (Sally Field), he leads anything but a restricted life."
+    },
+    {
+        "id":"6",
+        "location": "",
+        "image": "https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+        "hovimg":"https://media.tenor.com/mbix0vEvGrQAAAAC/empire-strikes.gif",
+        "alt": "thing",
+        "title":"Star Wars: The Empire Strikes Back",
+        "imdb":"8.7/10",
+        "dirctr":"Irvin Kershner",
+        "year":"1980",
+        "desc":"A tragic incident forces Anirudh, a middle-aged man, to take a trip down memory lane and reminisce his college days along with his friends, who were labelled as losers."
+    },
+    {
+        "id":"7",
+        "location": "",
+        "image": "https://flxt.tmsimg.com/assets/p22804_p_v8_av.jpg",
+        "hovimg":"https://media.tenor.com/gw1yNsaFmlMAAAAC/matrix-neo.gif",
+        "alt": "tumbbad",
+        "title":"The Matrix",
+        "imdb":"8.5/10",
+        "dirctr":"Lana Wachowski, Lilly Wachowski", 
+        "year":"1999",
+        "desc":"This classic story of love, tragedy and hope centers around a homeless tramp whom meets and instantly falls in love with a beautiful, albeit blind, flower seller."
+    },
+    {
+        "id":"8",
+        "location": "",
+        "image": "https://m.media-amazon.com/images/M/MV5BMjExMjkwNTQ0Nl5BMl5BanBnXkFtZTcwNTY0OTk1Mw@@._V1_.jpg",
+        "hovimg":"https://thumbs.gfycat.com/NervousVigorousBuck-size_restricted.gif",
+        "alt": "shining",
+        "title":"Inception",
+        "imdb":"8.8/10",
+        "dirctr":"Christopher Nolan", 
+        "year":"2010",
+        "desc":"This comedic masterpiece finds the iconic Little Tramp (Charlie Chaplin) employed at a state-of-the-art factory where the inescapable machinery completely overwhelms him, and where various mishaps keep getting him sent to prison."
+    },
+    {
+        "id":"9",
+        "location": "",
+        "image": "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+        "hovimg":"https://media.tenor.com/Mw-8wYa0UNsAAAAd/theoden-king.gif",
+        "alt": "psycho",
+        "title":"The Lord of the Rings: The Return of the King",
+        "imdb":"9.0/10",
+        "dirctr":"Peter Jackson", 
+        "year":"2003",
+        "desc":"A gentle Jewish-Italian waiter, Guido Orefice (Roberto Benigni), meets Dora (Nicoletta Braschi), a pretty schoolteacher, and wins her over with his charm and humor. Eventually they marry and have a son, Giosue (Giorgio Cantarini)."
+    },
+    {
+        "id":"10",
+        "location": "",
+        "image": "https://flxt.tmsimg.com/assets/p173378_p_v8_au.jpg",
+        "hovimg":"https://media.tenor.com/Jaq6GGy6yWEAAAAC/the-dark-knight-joker.gif",
+        "alt": "Alien",
+        "title":"The Dark Knight",
+        "imdb":"9.0/10",
+        "dirctr":"Christopher Nolan", 
+        "year":"2008",
+        "desc":"Slow-witted Forrest Gump (Tom Hanks) has never thought of himself as disadvantaged, and thanks to his supportive mother (Sally Field), he leads anything but a restricted life."
     }
 ]

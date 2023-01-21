@@ -1,42 +1,122 @@
 export const animelst = [
     {
-        "id":"thg",
+        "id":"1",
         "location": "",
-        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3d/Chhichhore_Poster.jpg/220px-Chhichhore_Poster.jpg",
+        "image": "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_.jpg",
+        "hovimg":"https://media4.giphy.com/media/9tZc9Mzo9K0yOYx38U/giphy.gif",
         "alt": "thing",
-        "title":"5.The Thing",
-        "desc":"A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims."
+        "title":"Spider-Man: Into the Spider-Verse",
+        "imdb":"8.4/10",
+        "dirctr":"Bob Persichetti, Peter Ramsey, Rodney Rothman",
+        "year":"2018",
+        "desc":"A tragic incident forces Anirudh, a middle-aged man, to take a trip down memory lane and reminisce his college days along with his friends, who were labelled as losers."
     },
     {
-        "id":"tbd",
+        "id":"2",
         "location": "",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/0/09/City_Lights_%281931_theatrical_poster_-_retouched%29.jpg",
+        "image": "https://m.media-amazon.com/images/M/MV5BNGYyNmI3M2YtNzYzZS00OTViLTkxYjAtZDIyZmE1Y2U1ZmQ2XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg",
+        "hovimg":"https://media.tenor.com/qbLFlt_O0UQAAAAd/kimi-ni-nowa-your-name.gif",
         "alt": "tumbbad",
-        "title":"4.Tumbbad",
-        "desc":"A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims."
+        "title":"Your Name",
+        "imdb":"8.4/10",
+        "dirctr":"Makoto Shinkai", 
+        "year":"2016",
+        "desc":"This classic story of love, tragedy and hope centers around a homeless tramp whom meets and instantly falls in love with a beautiful, albeit blind, flower seller."
     },
     {
-        "id":"shg",
+        "id":"3",
         "location": "",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/3/36/Modern_Times_poster.jpg",
+        "image": "https://m.media-amazon.com/images/M/MV5BZmY2NjUzNDQtNTgxNC00M2Q4LTljOWQtMjNjNDBjNWUxNmJlXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_FMjpg_UX1000_.jpg",
+        "hovimg":"https://i.pinimg.com/originals/a9/34/ab/a934ab75b12b4347437d086573ff6455.gif",
         "alt": "shining",
-        "title":"3.The Shining",
-        "desc":"A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims."
+        "title":"Grave of the Fireflies",
+        "imdb":"8.5/10",
+        "dirctr":"Isao Takahata",  
+        "year":"1988",
+        "desc":"This comedic masterpiece finds the iconic Little Tramp (Charlie Chaplin) employed at a state-of-the-art factory where the inescapable machinery completely overwhelms him, and where various mishaps keep getting him sent to prison."
     },
     {
-        "id":"psy",
+        "id":"4",
         "location": "",
-        "image": "https://upload.wikimedia.org/wikipedia/en/7/7c/Vitaebella.jpg",
+        "image": "https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_.jpg",
+        "hovimg":"https://media3.giphy.com/media/Lp71UWmAAeJHi/giphy.gif",
         "alt": "psycho",
-        "title":"2.Psycho",
-        "desc":"A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims."
+        "title":"The Lion King",
+        "imdb":"8.5/10",
+        "dirctr":"Roger AllersRob Minkoff", 
+        "year":"1994",
+        "desc":"A gentle Jewish-Italian waiter, Guido Orefice (Roberto Benigni), meets Dora (Nicoletta Braschi), a pretty schoolteacher, and wins her over with his charm and humor. Eventually they marry and have a son, Giosue (Giorgio Cantarini)."
     },
     {
-        "id":"aln",
+        "id":"5",
         "location": "",
-        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Forrest_Gump_poster.jpg/220px-Forrest_Gump_poster.jpg",
+        "image": "https://m.media-amazon.com/images/M/MV5BMjlmZmI5MDctNDE2YS00YWE0LWE5ZWItZDBhYWQ0NTcxNWRhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+        "hovimg":"https://media.tenor.com/gH3C2mzmFk4AAAAC/spirited-away-ghibli.gif",
         "alt": "Alien",
-        "title":"1.Alien",
-        "desc":"A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims."
+        "title":"Spirited Away",
+        "imdb":"8.6/10",
+        "dirctr":"Hayao Miyazaki", 
+        "year":"2001",
+        "desc":"Slow-witted Forrest Gump (Tom Hanks) has never thought of himself as disadvantaged, and thanks to his supportive mother (Sally Field), he leads anything but a restricted life."
+    },
+    {
+        "id":"6",
+        "location": "",
+        "image": "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_.jpg",
+        "hovimg":"https://media4.giphy.com/media/9tZc9Mzo9K0yOYx38U/giphy.gif",
+        "alt": "thing",
+        "title":"Spider-Man: Into the Spider-Verse",
+        "imdb":"8.4/10",
+        "dirctr":"Bob Persichetti, Peter Ramsey, Rodney Rothman",
+        "year":"2018",
+        "desc":"A tragic incident forces Anirudh, a middle-aged man, to take a trip down memory lane and reminisce his college days along with his friends, who were labelled as losers."
+    },
+    {
+        "id":"7",
+        "location": "",
+        "image": "https://m.media-amazon.com/images/M/MV5BNGYyNmI3M2YtNzYzZS00OTViLTkxYjAtZDIyZmE1Y2U1ZmQ2XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg",
+        "hovimg":"https://media.tenor.com/qbLFlt_O0UQAAAAd/kimi-ni-nowa-your-name.gif",
+        "alt": "tumbbad",
+        "title":"Your Name",
+        "imdb":"8.4/10",
+        "dirctr":"Makoto Shinkai", 
+        "year":"2016",
+        "desc":"This classic story of love, tragedy and hope centers around a homeless tramp whom meets and instantly falls in love with a beautiful, albeit blind, flower seller."
+    },
+    {
+        "id":"8",
+        "location": "",
+        "image": "https://m.media-amazon.com/images/M/MV5BZmY2NjUzNDQtNTgxNC00M2Q4LTljOWQtMjNjNDBjNWUxNmJlXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_FMjpg_UX1000_.jpg",
+        "hovimg":"https://i.pinimg.com/originals/a9/34/ab/a934ab75b12b4347437d086573ff6455.gif",
+        "alt": "shining",
+        "title":"Grave of the Fireflies",
+        "imdb":"8.5/10",
+        "dirctr":"Isao Takahata",  
+        "year":"1988",
+        "desc":"This comedic masterpiece finds the iconic Little Tramp (Charlie Chaplin) employed at a state-of-the-art factory where the inescapable machinery completely overwhelms him, and where various mishaps keep getting him sent to prison."
+    },
+    {
+        "id":"9",
+        "location": "",
+        "image": "https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_.jpg",
+        "hovimg":"https://media3.giphy.com/media/Lp71UWmAAeJHi/giphy.gif",
+        "alt": "psycho",
+        "title":"The Lion King",
+        "imdb":"8.5/10",
+        "dirctr":"Roger AllersRob Minkoff", 
+        "year":"1994",
+        "desc":"A gentle Jewish-Italian waiter, Guido Orefice (Roberto Benigni), meets Dora (Nicoletta Braschi), a pretty schoolteacher, and wins her over with his charm and humor. Eventually they marry and have a son, Giosue (Giorgio Cantarini)."
+    },
+    {
+        "id":"10",
+        "location": "",
+        "image": "https://m.media-amazon.com/images/M/MV5BMjlmZmI5MDctNDE2YS00YWE0LWE5ZWItZDBhYWQ0NTcxNWRhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+        "hovimg":"https://media.tenor.com/gH3C2mzmFk4AAAAC/spirited-away-ghibli.gif",
+        "alt": "Alien",
+        "title":"Spirited Away",
+        "imdb":"8.6/10",
+        "dirctr":"Hayao Miyazaki", 
+        "year":"2001",
+        "desc":"Slow-witted Forrest Gump (Tom Hanks) has never thought of himself as disadvantaged, and thanks to his supportive mother (Sally Field), he leads anything but a restricted life."
     }
 ]
