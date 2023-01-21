@@ -69,10 +69,10 @@ return (
                 <img src="/cinevault-hd-logo-green.png" alt="logo-for-website" className="logo-image h-[125px] w-[200px]" />
             </div>
             <div className="socials flex flex-row mt-[2%] justify-center">
-            <a href='https://www.facebook.com/petrichor.iitpkd' target={"_blank"} className='mr-[7%] hover:text-[#8685ef] transition-colors duration-300 cursor-pointer'>
+            <a href='https://www.facebook.com/petrichor.iitpkd' target={"_blank"} rel="noreferrer" className='mr-[7%] hover:text-[#8685ef] transition-colors duration-300 cursor-pointer'>
                 <BsFacebook  />
             </a>
-            <a href="https://instagram.com/petrichor.iitpkd?igshid=MDM4ZDc5MmU=" target={"_blank"} className='hover:text-[#8685ef] transition-colors duration-300 cursor-pointer'>
+            <a href="https://instagram.com/petrichor.iitpkd?igshid=MDM4ZDc5MmU=" target={"_blank"} rel="noreferrer" className='hover:text-[#8685ef] transition-colors duration-300 cursor-pointer'>
                 <BsInstagram />
             </a>
             </div>
