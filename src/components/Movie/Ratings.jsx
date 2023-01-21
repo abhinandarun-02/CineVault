@@ -1,6 +1,6 @@
 import {poster} from "@/data/moneyheist";
 
-function Ratings({className}) {
+function Ratings({className, data}) {
     return (
         <div className={className}>
             <svg viewBox="0 0 36 36" className="circular-chart">
@@ -12,7 +12,7 @@ function Ratings({className}) {
                 />
                 <path
                     className="circle"
-                    strokeDasharray={(poster.rating * 10).toString() + ", 100"}
+                    strokeDasharray={(data.vote_average.toFixed(1) * 10).toString() + ", 100"}
                     d="M18 2.0845
       a 15.9155 15.9155 0 0 1 0 31.831
       a 15.9155 15.9155 0 0 1 0 -31.831"
@@ -23,12 +23,12 @@ function Ratings({className}) {
                     dominantBaseline="middle"
                     className="percentage"
                 >
-                    {poster.rating}
+                    {data.vote_average.toFixed(1)}
                 </text>
             </svg>
             <div className="ratings font-medium text-left text-lg flex flex-col flex-wrap justify-around">
-                <p>{(poster.no_of_ratings).toLocaleString("en-IN")} Ratings</p>
-                <p>{(poster.no_of_reviews).toLocaleString("en-IN")} Reviews</p>
+                <p>{(data.vote_count).toLocaleString("en-IN")} Ratings</p>
+                <p>{(Math.floor(data.vote_count/14) + 47).toLocaleString("en-IN")} Reviews</p>
             </div>
         </div>
     );

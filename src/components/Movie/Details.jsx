@@ -12,8 +12,8 @@ function Details({ data }) {
           </span>
           <div className="genres grow">
             <ul className="tags flex flex-wrap gap-4 w-full">
-              {data.genres.map((id) => (
-                <Tag name={id} key={id} />
+              {data.genres.map((genre) => (
+                <Tag name={genre.name} key={genre.id} />
               ))}
             </ul>
           </div>
@@ -24,7 +24,7 @@ function Details({ data }) {
           </span>
           <div className="ans grow">
             <p className="country w-full text-lg text-[#b6b8b9]">
-              {data.country_of_origin}
+              {data.production_countries[0].name}
             </p>
           </div>
         </div>

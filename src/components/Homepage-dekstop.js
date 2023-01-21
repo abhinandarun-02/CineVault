@@ -22,7 +22,6 @@ function returnSVG(id){
   }
 
 const HomepageDesktop = ({movies}) => {
-
       const router  = useRouter()
 return ( 
     <div className='parent-homepage  h-[100vh] w-[100%] grid-row-1 text-[#686262] bg-[#252525] '>
@@ -94,7 +93,7 @@ return (
                 <div className="cards h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 overflow-x-scroll scrollbar">
                     {
                     movies.results.map((movie)=>(
-                        <Card name={movie.original_title} rating={movie.vote_average} img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} key={movie.id} />
+                        <Card name={movie.original_title} rating={movie.vote_average} img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} key={movie.id} id={movie.id} />
                     ))
                     }
                 </div>
