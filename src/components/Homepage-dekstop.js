@@ -64,11 +64,11 @@ const HomepageDesktop = () => {
 return ( 
     <div className='parent-homepage  h-[100vh] w-[100%] grid-row-1 text-[#686262] bg-[#252525] '>
   {/* Sidebar */}
-        <div className="sidebar bg-[#111111] col-span-1 flex flex-col text-lg h-[100%] min-w-[40%] overflow-hidden">
+        <div className="sidebar bg-[#111111] pt-[30px] pb-[10px] col-span-1 flex flex-col text-lg h-[100%] min-w-[40%] overflow-y-scroll scrollbar-thin">
             <div className="logo flex flex-col h-[20%] w-[100%] bg-transparent justify-center items-center p-10">
                 <img src="/cinevault-hd-logo-green.png" alt="logo-for-website" className="logo-image h-[125px] w-[200px]" />
             </div>
-            <div className="socials flex flex-row mt-[2%] justify-center">
+            <div className="socials flex flex-row mt-[25px] justify-center">
             <a href='https://www.facebook.com/petrichor.iitpkd' target={"_blank"} rel="noreferrer" className='mr-[7%] hover:text-[#8685ef] transition-colors duration-300 cursor-pointer'>
                 <BsFacebook  />
             </a>
@@ -76,40 +76,44 @@ return (
                 <BsInstagram />
             </a>
             </div>
-            <div className="title-genre mt-[30%] h-[5%] w-[100%] pl-5 flex items-center  animate glow delay-1">
-            <h1>Genre-Categories</h1>
-            </div>
-            <div className="genre-select flex flex-col h-[35%] w-[100%] bg-transparent justify-start items-center ">
-            {
-                genreArray.map((genre) => (
-                <div className="genre-category animate glow delay-2 pt-5 pb-5 w-[100%] z-[2] items-center justify-items-center border-r-[#8685ef] hover:border-r-4 hover:bg-[#353555] transition-all duration-300 cursor-pointer" key={genre.id}
-                    onClick = {()=>{router.push(genre.link)}}
-                >
-                    {returnSVG(genre.id)}
-                    {genre.message}
+            <div className="genre-details">
+                <div className="title-genre mt-[30%] h-[5%] w-[100%] pl-5 flex items-center  animate glow delay-1">
+                    <h1>Genre-Categories</h1>
                 </div>
-                ))
-            }
-            </div>
-            <br></br>
-            <br></br>
-            <div className="title-genre h-[5%] w-[100%] pl-5 flex items-center animate glow">
-                <h1>Social</h1>
-            </div>
-            <div className="genre-select flex flex-col h-[35%] w-[100%] bg-transparent justify-start items-center animate glow delay-2">
-                <div className="genre-category pt-5 pb-5 w-[100%] items-center justify-items-center border-r-[#8685ef] hover:border-r-4 hover:bg-[#353555] transition-all duration-300 cursor-pointer"  onClick = {()=>{router.push("/errorPage")}}>
-                    <BsPerson />
-                    Friends
-                </div>
-                <div className="genre-category pt-5 pb-5 w-[100%] items-center justify-items-center border-r-[#8685ef] hover:border-r-4 hover:bg-[#353555] transition-all duration-300 cursor-pointer" onClick = {()=>{router.push("/errorPage")}}>
-                    <BsPeople />
-                    Party
+                <div className="genre-select flex flex-col h-[35%] w-[100%] bg-transparent justify-start items-center ">
+                {
+                    genreArray.map((genre) => (
+                    <div className="genre-category animate glow delay-2 pt-5 pb-5 w-[100%] z-[2] items-center justify-items-center border-r-[#8685ef] hover:border-r-4 hover:bg-[#353555] transition-all duration-300 cursor-pointer" key={genre.id}
+                        onClick = {()=>{router.push(genre.link)}}
+                    >
+                        {returnSVG(genre.id)}
+                        {genre.message}
+                    </div>
+                    ))
+                }
                 </div>
             </div>
+            <div className="social-details">
+                <div className="title-genre h-[5%] w-[100%] mt-[10px] mb-[10px] pl-5 flex items-center animate glow">
+                    <h1>Social</h1>
+                </div>
+                <div className="genre-select flex flex-col h-[35%] w-[100%] bg-transparent justify-start items-center animate glow delay-2">
+                    <div className="genre-category pt-5 pb-5 w-[100%] items-center justify-items-center border-r-[#8685ef] hover:border-r-4 hover:bg-[#353555] transition-all duration-300 cursor-pointer"  onClick = {()=>{router.push("/errorPage")}}>
+                        <BsPerson />
+                        Friends
+                    </div>
+                    <div className="genre-category pt-5 pb-5 w-[100%] items-center justify-items-center border-r-[#8685ef] hover:border-r-4 hover:bg-[#353555] transition-all duration-300 cursor-pointer" onClick = {()=>{router.push("/errorPage")}}>
+                        <BsPeople />
+                        Party
+                    </div>
+                </div>
+            </div>
+               
         </div>
 {/* Main Content */}
         <div className="main-content h-full bg-[#252525] col-start-2 col-span-4 overflow-y-scroll scrollbar">
-            <div className="top-bar justify-center items-center h-[7%] w-[100%]">
+        {/* Top-bar */}
+            <div className="top-bar justify-center items-center h-[7%] min-h-[70px] w-[100%]">
                 <div className="search-bar bg-[#393939] w-[75%] h-[80%] ml-[7%] pl-5 rounded-3xl border-solid border-[3px] border-[#21877e]" >
                     <BsSearch />
                     <input type="text" className=' outline-none bg-transparent text-gray-400 h-[100%]' placeholder='Search for movies' />
@@ -119,13 +123,14 @@ return (
                     <div className="user-profile-name text-white h-[100%] flex justify-center items-center">A Demo User</div>
                 </div>
             </div>
-
+    {/* Slideshow */}
             <h1 className="title text-white pl-[5%] mt-[3%] text-lg font-bold">Featured Movies</h1>
-            <div className="slide-show flex justify-center items-center h-[40%] w-[100%] animate glow delay-2">
+            <div className="slide-show flex justify-center items-center h-[40%] min-h-[400px] w-[100%] animate glow delay-2">
                 <Slideshow />
             </div>
             <br></br>
-            <div className="popular-movies  flex flex-col h-[60%] w-[100%]">
+    {/* Popular Movies */}
+            <div className="popular-movies  flex flex-col h-[65%] min-h-[500px] max-h-[520px] w-[100%] shrink-0 justify-center">
                 <h1 className="title pl-[5%] text-white text-lg font-bold">Most Popular Movies</h1>
                 <br></br>
                 <div className="cards h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 overflow-x-scroll scrollbar">

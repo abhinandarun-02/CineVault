@@ -71,7 +71,6 @@ li {
   grid-template-columns: 10% 90%;
   align-items: center;
 }
-
 .slideshow{
   transition: all ease-in-out 2s;
 
@@ -135,8 +134,8 @@ li {
 
 @layer utilities {
   .scrollbar::-webkit-scrollbar {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
   }
 
   .scrollbar::-webkit-scrollbar-track {
@@ -150,6 +149,24 @@ li {
     border: 3px solid #525151;
   }
 }
+@layer utilities {
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #252525;
+    border-radius: 100vh;
+    border: 3px solid #525151;
+  }
+}
+
 
 .cards{
   display: flex;
@@ -222,7 +239,7 @@ li {
 
 .homepage-mobile{
   display: grid;
-  grid-template-rows: 10% 40% 60%;
+  grid-template-rows: /*10% 40% 60%*/ minmax(100px,10%) minmax(400px,40%) minmax(450px,60%); 
   grid-template-columns: 100%;
   scrollbar-width: 0px;
   font-family: 'Questrial','sans';
