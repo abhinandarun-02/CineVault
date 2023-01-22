@@ -1,3 +1,17 @@
+import React, { useState,useEffect } from "react";
+import { SiImdb } from "react-icons/si";
+import { GiDirectorChair } from "react-icons/gi";
+import {useRouter} from 'next/router'
+import { hrrorlst } from '@/data/horrormvs'
+import { actionlst } from '@/data/actionmvs'
+import { animelst } from '@/data/animemvs'
+import { mysterylst } from '@/data/mysterymvs'
+import { romcomlst } from "@/data/romcommvs";
+import useWindowSize from '@/Hooks/useWindowSize'
+import { BiMenu } from "react-icons/bi";
+import { genreArray } from "@/data/genre";
+import { AnimatePresence, motion } from "framer-motion";
+import { AiOutlineClose, AiFillCloseCircle } from "react-icons/ai";
 import {
   BsSearch,
   BsFacebook,
@@ -5,21 +19,14 @@ import {
   BsPerson,
   BsPeople,
 } from "react-icons/bs";
-import { AiOutlineClose, AiFillCloseCircle } from "react-icons/ai";
-import { BiMenu } from "react-icons/bi";
-import { useState } from "react";
-import SlideshowMobile from "./SlideshowMobile.js";
-import Card from "./Card";
-import { genreArray } from "@/data/genre.js";
-import { AnimatePresence, motion } from "framer-motion";
-import { useRouter } from "next/router.js";
 
-import Dracula from "../svg-assets/dracula-svgrepo-com.svg";
-import Love from "../svg-assets/valentines-valentines-day-svgrepo-com.svg";
-import Anime from "../svg-assets/anime-and-manga-svgrepo-com.svg";
-import Detetive from "../svg-assets/detective-face-svgrepo-com.svg";
-import Action from "../svg-assets/criminal-heist-svgrepo-com.svg";
+import Dracula from "../../svg-assets/dracula-svgrepo-com.svg";
+import Love from "../../svg-assets/valentines-valentines-day-svgrepo-com.svg";
+import Anime from "../../svg-assets/anime-and-manga-svgrepo-com.svg";
+import Detetive from "../../svg-assets/detective-face-svgrepo-com.svg";
+import Action from "../../svg-assets/criminal-heist-svgrepo-com.svg";
 
+//sm:border-solid sm:border-[3px] sm:border-[#21877e]
 function returnSVG(id) {
   switch (id) {
     case "horror":
@@ -39,52 +46,67 @@ function returnSVG(id) {
       break;
   }
 }
+const Genrefunc=()=> {
+    const router=useRouter()
+    const genreid=router.query.genreid
+    const width = useWindowSize().width;
+    const [dataset,setDataset] = useState([]);
+ 
+    const [hover, setHover] = useState(false);
+    const [bgImage, setBgImage] = useState(
+      "https://png.pngtree.com/thumb_back/fw800/background/20220215/pngtree-retro-video-camera-poster-of-film-and-television-festival-image_926071.jpg"
+    );
+    const [titleDet, settitleDet] = useState("");
+    const [descDet, setdescDet] = useState("");
+    const [dirctr, setDirctr] = useState("");
+    const [yearDet, setyearDet] = useState("");
 
-const HomepageMobile = ({width}) => {
-  const router = useRouter();
-  const posterArray = [
-    {
-      id: "your-name",
-      poster: "/your-name-vertical-poster.jpg",
-      name: "Your Name (Kimi no Na wa)",
-      rating: 8.4,
-    },
-    {
-      id: "dark-knight-rises",
-      poster: "/dark-knight-rises.jpg",
-      name: "Batman: The Dark Knight Rises",
-      rating: 8.4,
-    },
-    {
-      id: "into-the-spiderverse",
-      poster: "/spiderman-verical-spiderverse.jpg",
-      name: "Spiderman: Into the Spiderverse",
-      rating: 8.4,
-    },
-    {
-      id: "inception",
-      poster: "/inception-vertical-poster.jpeg",
-      name: "Inception",
-      rating: 8.8,
-    },
-    {
-      id: "into-the-spiderverse-1",
-      poster: "/spiderman-verical-spiderverse.jpg",
-      name: "Spiderman: Into the Spiderverse",
-      rating: 8.4,
-    },
-    {
-      id: "your-name-1",
-      poster: "/your-name-vertical-poster.jpg",
-      name: "Your Name (Kimi no Na wa)",
-      rating: 8.4,
-    },
-  ];
-  // Menu Required States
-  const [menu, setMenu] = useState(false);
+    const [menu, setMenu] = useState(false);
+
+    function selectinit(mvlst) {
+      setBgImage(mvlst.hovimg);
+                   settitleDet(mvlst.title);
+                   setDirctr(mvlst.dirctr);
+                   setdescDet(mvlst.imdb);
+                   setyearDet(mvlst.year);
+                   setHover(true);
+}
+    useEffect(() => {
+        // Update the document title using the browser API
+        if(genreid=='1'){
+            setDataset(hrrorlst);
+            selectinit(hrrorlst[0])
+            console.log(hrrorlst);
+        }
+        else if(genreid=='2'){
+            setDataset(romcomlst);
+            selectinit(romcomlst[0])
+        }
+        else if(genreid=='3'){
+            setDataset(mysterylst);
+            selectinit(mysterylst[0])
+        }
+        else if(genreid=='4'){
+            setDataset(animelst);
+            selectinit(animelst[0])
+        }
+        else if(genreid=='5'){
+            setDataset(actionlst);
+            selectinit(actionlst[0])
+        }
+      },[genreid]);
+     
+    
+    
   return (
-    <div className="homepage-mobile h-[100vh] bg-[#252525] overflow-y-scroll scrollbar">
-      {/* Menu-Bar */}
+    <div>
+    <div
+      className=" min-h-screen bg-cover duration-500 relative "
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
+      <div className="genredes bg-gradient-to-t from-black     ">
+        <div className="genredes bg-gradient-to-r from-black ">
+        {/* Menu-Bar */}
       <AnimatePresence>
         {menu && (
           <motion.div
@@ -193,7 +215,7 @@ const HomepageMobile = ({width}) => {
       </AnimatePresence>
 
       {/* Title Bar */}
-      <div className="title-bar relative flex h-[100%] w-[100%] justify-items-center items-center">
+      <div className="title-bar relative flex h-[100%] w-[100%] justify-items-center items-center pt-2">
         <img
           src="/cinevault-hd-logo-green.png"
           alt="cinevault-logo"
@@ -229,33 +251,74 @@ const HomepageMobile = ({width}) => {
           }}
         />
       </div>
+          <div className="grid grid-rows-2 h-screen grid-flow-col gap-6 ">
+            <div className=" pl-5 p-15 text-left duration-500 w-full sm:w-2/4  self-center">
+            <div className="flex flex-col mt-10 sm:mt-8 sm:ml-12 sm:gap-3 gap-1">
+              <div className="sm:text-7xl text-4xl text-white font-bold font-carterfont ">
+                {titleDet}
+              </div>
+              <div className=" sm:text-3xl text-lg text-white font-normal  pt-3">
+                {yearDet}
+              </div>
+              
+              {hover && (
+                <div className="flex flex-row pt-3 ">
+                  <SiImdb className="text-white sm:text-6xl text-3xl"  />
+                <div className=" sm:text-3xl text-lg text-white font-normal  ml-5">
+                    {descDet}
+                </div>
+                </div>
+              )}
+              
+              {hover && (
+                <div className="flex flex-row pt-3 ">
+                <GiDirectorChair className="text-white sm:text-6xl text-3xl"/>
+              <div className=" sm:text-3xl text-lg text-white font-normal  ml-5">
+                  {dirctr}
+              </div>
+              </div>
+              )}
+              {hover && (
+                <button style={{backgroundColor: "#00C896"}} className="mt-2 bg-black hover:scale-105 text-white font-bold hover:text-white p-3 border border-black hover:border-transparent rounded-2xl sm:h-[12%] sm:w-[20%] w-[50%] ">
+                  Learn More
+                </button>
+              )}
+            </div>
+            </div>
 
-      {/* Slideshow */}
-      <div className="slideshow-mobile flex flex-col h-[100%] shrink-0 w-[100%] justify-center">
-        <h1 className="title text-white pl-[5%] mt-[3%] text-lg font-bold mb-[3%]">
-          Featured Movies
-        </h1>
-        <SlideshowMobile />
-      </div>
-
-      {/* Popular Movies */}
-      <div className="popular-movies flex flex-col h-[100%] w-[100%] shrink-0 justify-center">
-        <h1 className="title pl-[5%] text-white text-lg font-bold">
-          Most Popular Movies
-        </h1>
-        <div className="cards-mobile h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 scrollbar">
-          {posterArray.map((poster) => (
-            <Card
-              name={poster.name}
-              rating={poster.rating}
-              img={poster.poster}
-              key={poster.id}
-            />
-          ))}
+            <div className="flex flex-row overflow-x-scroll scrollbar max-w-[100%] absolute bottom-0">
+              {dataset.map((mvlst) => (
+                <div className=" p-3 h-[50%]" key={mvlst.id}>
+                  <div
+                    className={`relative transition-all duration-500 hover:scale-105 border-solid border-black `}
+                    onMouseEnter={() => {
+                      setBgImage(mvlst.hovimg);
+                      settitleDet(mvlst.title);
+                      setDirctr(mvlst.dirctr);
+                      setdescDet(mvlst.imdb);
+                      setyearDet(mvlst.year);
+                      setHover(true);
+                    }}
+                    onMouseLeave={() => setHover(true)}
+                  >
+                    <div className=" overflow-hidden shadow-xl sm:h-[300px] sm:w-[200px] h-[200px] w-[150px]">
+                      <img
+                        
+                        className="rounded-lg sm:rounded-xl h-[100%] object-cover "
+                        src={mvlst.image}
+                        alt="Card Image"
+                      />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+   </div>
   );
-};
+}
 
-export default HomepageMobile;
+export default Genrefunc
