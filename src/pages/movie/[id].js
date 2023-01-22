@@ -1,5 +1,6 @@
 import { server } from "config";
 import Error from "next/error";
+import Head from "next/head";
 
 import Layout from "@/components/Movie/Layout";
 import Poster from "@/components/Movie/Poster";
@@ -58,6 +59,9 @@ const Movie=({ movie })=>{
   
   return (
     <div className="">
+      <Head>
+        <title>{`${(movie.title || movie.original_name)} (${movie.release_date.substring(0, 4)}) | CineVault : Watch Movies Online`}</title>
+      </Head>
       {/* Menu-Bar */}
       <AnimatePresence>
         {menu && (
