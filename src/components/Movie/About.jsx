@@ -43,7 +43,7 @@ const languageNames = new Intl.DisplayNames(["en"], {
           onClick={() => setIsOpen(true)}
           className="watch-now flex items-center justify-center px-24 max-sm:px-4 py-4 bg-[#00c896] rounded-[50px] text-center cursor-pointer max-sm:w-full"
         >
-          <span className="text-2xl font-medium title whitespace-nowrap">
+          <span className="text-2xl font-semibold title whitespace-nowrap">
             Watch Trailer
           </span>
           <img

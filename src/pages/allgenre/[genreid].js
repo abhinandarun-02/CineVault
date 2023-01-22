@@ -57,6 +57,7 @@ const Genrefunc=()=> {
     const [bgImage, setBgImage] = useState(
       "https://png.pngtree.com/thumb_back/fw800/background/20220215/pngtree-retro-video-camera-poster-of-film-and-television-festival-image_926071.jpg"
     );
+    const [movieId, setMovieId] = useState("");
     const [titleDet, settitleDet] = useState("");
     const [descDet, setdescDet] = useState("");
     const [dirctr, setDirctr] = useState("");
@@ -282,9 +283,9 @@ const Genrefunc=()=> {
               </div>
               )}
               {hover && (
-                <button style={{backgroundColor: "#00C896"}} className=" bg-black hover:scale-105 text-white font-bold hover:text-white p-2 border border-black hover:border-transparent rounded-2xl lg:w-[20%] sm:w-[50%] w-[150px]">
+                <Link href={`/movie/${movieId}`} style={{backgroundColor: "#00C896"}} className="flex items-start justify-center bg-black hover:scale-105 text-white font-bold hover:text-white p-2 border border-black hover:border-transparent rounded-2xl lg:w-[20%] sm:w-[50%] w-[150px]">
                   Learn More
-                </button>
+                </Link>
               )}
             </div>
             </div>
@@ -295,6 +296,7 @@ const Genrefunc=()=> {
                   <div
                     className={`relative transition-all duration-500 hover:scale-105 border-solid border-black `}
                     onMouseEnter={() => {
+                      setMovieId(mvlst.id);
                       setBgImage(mvlst.hovimg);
                       settitleDet(mvlst.title);
                       setDirctr(mvlst.dirctr);
