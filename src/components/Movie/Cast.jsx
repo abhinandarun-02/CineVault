@@ -13,7 +13,7 @@ function CastCrew({ movie }) {
 }, [movie.id])
 
   return (
-    <section className="section-3 mx-auto px-4 w-full flex flex-col items-center">
+    <section className="section-3 mx-auto px-4 w-full flex flex-col items-center overflow-x-hidden">
       <h2 className="title text-3xl font-semibold w-full text-center">
         Cast & Crew
       </h2>
