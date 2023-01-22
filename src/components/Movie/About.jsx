@@ -41,7 +41,7 @@ const languageNames = new Intl.DisplayNames(["en"], {
       <div className="flex gap-5 w-full buttons items-center max-sm:flex-col">
         <button
           onClick={() => setIsOpen(true)}
-          className="watch-now flex items-center justify-center px-24 max-sm:px-4 py-4 bg-[#ff5059] rounded-[50px] text-center cursor-pointer max-sm:w-full"
+          className="watch-now flex items-center justify-center px-24 max-sm:px-4 py-4 bg-[#00c896] rounded-[50px] text-center cursor-pointer max-sm:w-full"
         >
           <span className="text-2xl font-medium title whitespace-nowrap">
             Watch Trailer

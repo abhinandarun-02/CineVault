@@ -17,7 +17,7 @@ body {
   margin: 0;
   background-color: #161a1d;
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: "Questrial", sans-serif;
 }
 
 /* RESETS */
@@ -394,7 +394,7 @@ main.movie-details {
 }
 .circle {
   fill: none;
-  stroke: #ff5059;
+  stroke: #00c896;
   stroke-width: 2.5;
   stroke-linecap: round;
   animation: progress 1s ease-out forwards;
