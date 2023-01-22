@@ -411,3 +411,8 @@ main.movie-details {
   font-weight: 600;
   text-anchor: middle;
 }
+
+.genregrid{
+  display:grid;
+  grid-template-rows: 60% 40%;
+}

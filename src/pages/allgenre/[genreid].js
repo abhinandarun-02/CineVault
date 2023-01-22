@@ -99,13 +99,13 @@ const Genrefunc=()=> {
     
     
   return (
-    <div>
+    <div className="bg-black">
     <div
       className=" min-h-screen bg-cover duration-500 relative "
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      <div className="genredes bg-gradient-to-t from-black     ">
-        <div className="genredes bg-gradient-to-r from-black ">
+      <div className="min-h-screen bg-gradient-to-t from-black     ">
+        <div className="min-h-screen bg-gradient-to-r from-black ">
         {/* Menu-Bar */}
       <AnimatePresence>
         {menu && (
@@ -159,6 +159,7 @@ const Genrefunc=()=> {
                       key={genre.id}
                       onClick={() => {
                         router.push(genre.link);
+                        setMenu(false);
                       }}
                     >
                       {returnSVG(genre.id)}
@@ -251,20 +252,20 @@ const Genrefunc=()=> {
           }}
         />
       </div>
-          <div className="grid grid-rows-2 h-screen grid-flow-col gap-6 ">
-            <div className=" pl-5 p-15 text-left duration-500 w-full sm:w-2/4  self-center">
+          <div className="genregrid  min-h-screen ">
+            <div className=" pl-5 p-15 text-left duration-500 w-full sm:w-2/4  self-center ">
             <div className="flex flex-col mt-10 sm:mt-8 sm:ml-12 sm:gap-3 gap-1">
-              <div className="sm:text-7xl text-4xl text-white font-bold font-carterfont ">
+              <div className="text-3xl 2xl:text-5xl md:text-3xl lg:text-5xl xl:text-6xl   text-white font-bold font-carterfont ">
                 {titleDet}
               </div>
-              <div className=" sm:text-3xl text-lg text-white font-normal  pt-3">
+              <div className=" sm:text-3xl text-lg 2xl:text-2xl lg:text-xl md:text-xl text-white font-normal  pt-3">
                 {yearDet}
               </div>
               
               {hover && (
                 <div className="flex flex-row pt-3 ">
-                  <SiImdb className="text-white sm:text-6xl text-3xl"  />
-                <div className=" sm:text-3xl text-lg text-white font-normal  ml-5">
+                  <SiImdb className="text-white sm:text-6xl text-3xl 2xl:text-2xl lg:text-xl md:text-xl"  />
+                <div className=" sm:text-3xl text-lg 2xl:text-2xl lg:text-xl md:text-xl text-white font-normal  ml-5">
                     {descDet}
                 </div>
                 </div>
@@ -272,21 +273,21 @@ const Genrefunc=()=> {
               
               {hover && (
                 <div className="flex flex-row pt-3 ">
-                <GiDirectorChair className="text-white sm:text-6xl text-3xl"/>
-              <div className=" sm:text-3xl text-lg text-white font-normal  ml-5">
+                <GiDirectorChair className="text-white sm:text-6xl text-3xl 2xl:text-2xl lg:text-xl md:text-xl"/>
+              <div className=" sm:text-3xl text-lg 2xl:text-2xl lg:text-xl md:text-xl text-white font-normal  ml-5">
                   {dirctr}
               </div>
               </div>
               )}
               {hover && (
-                <button style={{backgroundColor: "#00C896"}} className="mt-2 bg-black hover:scale-105 text-white font-bold hover:text-white p-3 border border-black hover:border-transparent rounded-2xl sm:h-[12%] sm:w-[20%] w-[50%] ">
+                <button style={{backgroundColor: "#00C896"}} className=" bg-black hover:scale-105 text-white font-bold hover:text-white p-2 border border-black hover:border-transparent rounded-2xl lg:w-[20%] sm:w-[50%] w-[150px]">
                   Learn More
                 </button>
               )}
             </div>
             </div>
 
-            <div className="flex flex-row overflow-x-scroll scrollbar max-w-[100%] absolute bottom-0">
+            <div className="flex flex-row overflow-x-scroll scrollbar max-w-[100%] justify-center items-start min-h-[250px] md:min-h-[350px]">
               {dataset.map((mvlst) => (
                 <div className=" p-3 h-[50%]" key={mvlst.id}>
                   <div
