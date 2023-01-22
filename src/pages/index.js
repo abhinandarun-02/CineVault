@@ -10,7 +10,7 @@ export default function Home({popularMovies, latestMovies,topMovies, upcomingMov
   return (
     <div className='bg-[#252525]'>
       {size.width>=1000 && <HomepageDesktop popularMovies={popularMovies} latestMovies={latestMovies} topMovies={topMovies} upcomingMovies={upcomingMovies}/>}
-      {size.width<1000 && <HomepageMobile width={size.width}/>}
+      {size.width<1000 && <HomepageMobile width={size.width} popularMovies={popularMovies} latestMovies={latestMovies} topMovies={topMovies} upcomingMovies={upcomingMovies}/>}
     </div>
   );
 }

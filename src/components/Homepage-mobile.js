@@ -40,50 +40,13 @@ function returnSVG(id) {
   }
 }
 
-const HomepageMobile = ({width}) => {
+const HomepageMobile = ({width, popularMovies, latestMovies, topMovies, upcomingMovies}) => {
   const router = useRouter();
-  const posterArray = [
-    {
-      id: "your-name",
-      poster: "/your-name-vertical-poster.jpg",
-      name: "Your Name (Kimi no Na wa)",
-      rating: 8.4,
-    },
-    {
-      id: "dark-knight-rises",
-      poster: "/dark-knight-rises.jpg",
-      name: "Batman: The Dark Knight Rises",
-      rating: 8.4,
-    },
-    {
-      id: "into-the-spiderverse",
-      poster: "/spiderman-verical-spiderverse.jpg",
-      name: "Spiderman: Into the Spiderverse",
-      rating: 8.4,
-    },
-    {
-      id: "inception",
-      poster: "/inception-vertical-poster.jpeg",
-      name: "Inception",
-      rating: 8.8,
-    },
-    {
-      id: "into-the-spiderverse-1",
-      poster: "/spiderman-verical-spiderverse.jpg",
-      name: "Spiderman: Into the Spiderverse",
-      rating: 8.4,
-    },
-    {
-      id: "your-name-1",
-      poster: "/your-name-vertical-poster.jpg",
-      name: "Your Name (Kimi no Na wa)",
-      rating: 8.4,
-    },
-  ];
+
   // Menu Required States
   const [menu, setMenu] = useState(false);
   return (
-    <div className="homepage-mobile h-[100vh] bg-[#252525] overflow-y-scroll scrollbar">
+    <div className="homepage-mobile box-borders h-[100vh] bg-[#252525] overflow-y-scroll scrollbar">
       {/* Menu-Bar */}
       <AnimatePresence>
         {menu && (
@@ -231,25 +194,77 @@ const HomepageMobile = ({width}) => {
       </div>
 
       {/* Slideshow */}
-      <div className="slideshow-mobile flex flex-col h-[100%] shrink-0 w-[100%] justify-center">
+      <div className=" slideshow-mobile flex flex-col h-[100%] shrink-0 w-[100%] justify-center">
         <h1 className="title text-white pl-[5%] mt-[3%] text-lg font-bold mb-[3%]">
           Featured Movies
         </h1>
         <SlideshowMobile />
       </div>
 
-      {/* Popular Movies */}
+      {/* Top Rated Movies */}
       <div className="popular-movies flex flex-col h-[100%] w-[100%] shrink-0 justify-center">
+        <h1 className="title pl-[5%] text-white text-lg font-bold">
+          Top Rated Movies
+        </h1>
+        <div className="cards-mobile h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 scrollbar-thin">
+          {topMovies.results.map((movie) => (
+            <Card
+              name={movie.title} 
+              rating={movie.vote_average} 
+              img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} 
+              key={movie.id} 
+              id={movie.id}
+            />
+          ))}
+        </div>
+      </div>
+      {/* Most Popular Movies */}
+      <div className="popular-movies my-5 flex flex-col h-[100%] w-[100%] shrink-0 justify-center">
         <h1 className="title pl-[5%] text-white text-lg font-bold">
           Most Popular Movies
         </h1>
-        <div className="cards-mobile h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 scrollbar">
-          {posterArray.map((poster) => (
+        <div className="cards-mobile h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 scrollbar-thin">
+          {popularMovies.results.map((movie) => (
             <Card
-              name={poster.name}
-              rating={poster.rating}
-              img={poster.poster}
-              key={poster.id}
+              name={movie.title} 
+              rating={movie.vote_average} 
+              img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} 
+              key={movie.id} 
+              id={movie.id}
+            />
+          ))}
+        </div>
+      </div>
+      {/* Latest Movies */}
+      <div className="popular-movies my-5 flex flex-col h-[100%] w-[100%] shrink-0 justify-center">
+        <h1 className="title pl-[5%] text-white text-lg font-bold">
+          Latest Movies
+        </h1>
+        <div className="cards-mobile h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 scrollbar-thin">
+          {latestMovies.results.slice(3).reverse().map((movie) => (
+            <Card
+              name={movie.title} 
+              rating={movie.vote_average} 
+              img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} 
+              key={movie.id} 
+              id={movie.id}
+            />
+          ))}
+        </div>
+      </div>
+        {/* Upcoming Movies */}
+      <div className="popular-movies my-5 flex flex-col h-[100%] w-[100%] shrink-0 justify-center">
+        <h1 className="title pl-[5%] text-white text-lg font-bold">
+          Upcoming Movies
+        </h1>
+        <div className="cards-mobile h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 scrollbar-thin">
+          {upcomingMovies.results.map((movie) => (
+            <Card
+              name={movie.title} 
+              rating={movie.vote_average} 
+              img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} 
+              key={movie.id} 
+              id={movie.id}
             />
           ))}
         </div>

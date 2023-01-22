@@ -97,7 +97,7 @@ return (
                 <div className="cards h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 overflow-x-scroll scrollbar-thin">
                     {
                     topMovies.results.map((movie)=>(
-                        <Card name={movie.original_title} rating={movie.vote_average} img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} key={movie.id} id={movie.id} />
+                        <Card name={movie.title} rating={movie.vote_average} img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} key={movie.id} id={movie.id} />
                     ))
                     }
                 </div>
@@ -109,7 +109,7 @@ return (
                 <div className="cards h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 overflow-x-scroll scrollbar-thin">
                     {
                     popularMovies.results.map((movie)=>(
-                        <Card name={movie.original_title} rating={movie.vote_average} img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} key={movie.id} id={movie.id} />
+                        <Card name={movie.title} rating={movie.vote_average} img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} key={movie.id} id={movie.id} />
                     ))
                     }
                 </div>
@@ -120,7 +120,7 @@ return (
                 <div className="cards h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 overflow-x-scroll scrollbar-thin">
                     {
                     latestMovies.results.slice(3).reverse().map((movie)=>(
-                        <Card name={movie.original_title} rating={movie.vote_average} img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} key={movie.id} id={movie.id} />
+                        <Card name={movie.title} rating={movie.vote_average} img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} key={movie.id} id={movie.id} />
                     ))
                     }
                 </div>
@@ -131,7 +131,7 @@ return (
                 <div className="cards h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 overflow-x-scroll scrollbar-thin">
                     {
                     upcomingMovies.results.map((movie)=>(
-                        <Card name={movie.original_title} rating={movie.vote_average} img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} key={movie.id} id={movie.id} />
+                        <Card name={movie.title} rating={movie.vote_average} img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} key={movie.id} id={movie.id} />
                     ))
                     }
                 </div>
