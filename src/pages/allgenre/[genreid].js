@@ -123,11 +123,12 @@ const Genrefunc=()=> {
               transition={{ duration: 0.5 }}
               className="sidebar bg-[#252525] flex flex-col text-lg pt-[30px] pb-[10px] rounded-tr-2xl rounded-br-2xl h-[100%] min-w-[250px] max-w-[300px] text-white overflow-y-scroll scrollbar"
             >
-              <div className="logo flex flex-col h-[20%] w-[100%] bg-transparent justify-center items-center p-10">
+              <div className="logo flex flex-col h-[20%] w-[100%] bg-transparent justify-center items-center p-10 cursor-pointer">
                 <img
                   src="/cinevault-hd-logo-green.png"
                   alt="logo-for-website"
                   className="logo-image h-[100px] w-[150px]"
+                  onClick = {()=>{router.push("/")}}
                 />
               </div>
               <div className="socials flex flex-row mt-[25px] justify-center">
@@ -220,7 +221,8 @@ const Genrefunc=()=> {
         <img
           src="/cinevault-hd-logo-green.png"
           alt="cinevault-logo"
-          className="logo ml-[10%] max-h-[50px]"
+          className="logo ml-[10%] max-h-[50px] cursor-pointer"
+          onClick = {()=>{router.push("/")}}
         />
         <div className="search-bar-mobile relative bg-[#393939] w-[90%] h-[100%] max-h-[50px] rounded-3xl justify-center">
           <div className="user-profile rounded-3xl h-[100%] w-[100%] flex justify-center items-center bg-[#21877e]">
@@ -246,7 +248,7 @@ const Genrefunc=()=> {
         <BiMenu
           size={30}
           color="white"
-          className=" hover:scale-95 transition-all duration-300"
+          className=" hover:scale-95 transition-all duration-300 cursor-pointer"
           onClick={() => {
             setMenu(true);
           }}
