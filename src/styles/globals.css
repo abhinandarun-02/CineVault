@@ -331,9 +331,6 @@ main.movie-details {
   .cast {
     flex-direction: row;
   }
-  .expand {
-    display: none;
-  }
   .avatar {
     flex-direction: column;
     text-align: center;

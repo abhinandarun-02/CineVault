@@ -29,14 +29,6 @@ function CastCrew({ movie }) {
             />
           ))}
         </ul>
-        <div className="expand flex mt-4 cursor-pointer">
-          <h4 className="text-[#ff5059] text-xl font-medium">Show All</h4>
-          <img
-            className="pl-3 w-10"
-            src="/movie-page/expand_circle_down_white_18dp.svg"
-            alt=""
-          />
-        </div>
       </div>
     </section>
   );
