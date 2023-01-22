@@ -1,6 +1,6 @@
 export const animelst = [
     {
-        "id":"1",
+        "id":"324857",
         "location": "",
         "image": "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_.jpg",
         "hovimg":"https://media4.giphy.com/media/9tZc9Mzo9K0yOYx38U/giphy.gif",
@@ -12,7 +12,7 @@ export const animelst = [
         "desc":"A tragic incident forces Anirudh, a middle-aged man, to take a trip down memory lane and reminisce his college days along with his friends, who were labelled as losers."
     },
     {
-        "id":"2",
+        "id":"372058",
         "location": "",
         "image": "https://m.media-amazon.com/images/M/MV5BNGYyNmI3M2YtNzYzZS00OTViLTkxYjAtZDIyZmE1Y2U1ZmQ2XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg",
         "hovimg":"https://media.tenor.com/qbLFlt_O0UQAAAAd/kimi-ni-nowa-your-name.gif",
@@ -24,7 +24,7 @@ export const animelst = [
         "desc":"This classic story of love, tragedy and hope centers around a homeless tramp whom meets and instantly falls in love with a beautiful, albeit blind, flower seller."
     },
     {
-        "id":"3",
+        "id":"12477",
         "location": "",
         "image": "https://m.media-amazon.com/images/M/MV5BZmY2NjUzNDQtNTgxNC00M2Q4LTljOWQtMjNjNDBjNWUxNmJlXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_FMjpg_UX1000_.jpg",
         "hovimg":"https://i.pinimg.com/originals/a9/34/ab/a934ab75b12b4347437d086573ff6455.gif",
@@ -36,7 +36,7 @@ export const animelst = [
         "desc":"This comedic masterpiece finds the iconic Little Tramp (Charlie Chaplin) employed at a state-of-the-art factory where the inescapable machinery completely overwhelms him, and where various mishaps keep getting him sent to prison."
     },
     {
-        "id":"4",
+        "id":"8587",
         "location": "",
         "image": "https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_.jpg",
         "hovimg":"https://media3.giphy.com/media/Lp71UWmAAeJHi/giphy.gif",
@@ -48,7 +48,7 @@ export const animelst = [
         "desc":"A gentle Jewish-Italian waiter, Guido Orefice (Roberto Benigni), meets Dora (Nicoletta Braschi), a pretty schoolteacher, and wins her over with his charm and humor. Eventually they marry and have a son, Giosue (Giorgio Cantarini)."
     },
     {
-        "id":"5",
+        "id":"129",
         "location": "",
         "image": "https://m.media-amazon.com/images/M/MV5BMjlmZmI5MDctNDE2YS00YWE0LWE5ZWItZDBhYWQ0NTcxNWRhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
         "hovimg":"https://media.tenor.com/gH3C2mzmFk4AAAAC/spirited-away-ghibli.gif",
@@ -60,7 +60,7 @@ export const animelst = [
         "desc":"Slow-witted Forrest Gump (Tom Hanks) has never thought of himself as disadvantaged, and thanks to his supportive mother (Sally Field), he leads anything but a restricted life."
     },
     {
-        "id":"6",
+        "id":"324857",
         "location": "",
         "image": "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_.jpg",
         "hovimg":"https://media4.giphy.com/media/9tZc9Mzo9K0yOYx38U/giphy.gif",
@@ -72,7 +72,7 @@ export const animelst = [
         "desc":"A tragic incident forces Anirudh, a middle-aged man, to take a trip down memory lane and reminisce his college days along with his friends, who were labelled as losers."
     },
     {
-        "id":"7",
+        "id":"372058",
         "location": "",
         "image": "https://m.media-amazon.com/images/M/MV5BNGYyNmI3M2YtNzYzZS00OTViLTkxYjAtZDIyZmE1Y2U1ZmQ2XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg",
         "hovimg":"https://media.tenor.com/qbLFlt_O0UQAAAAd/kimi-ni-nowa-your-name.gif",
@@ -84,7 +84,7 @@ export const animelst = [
         "desc":"This classic story of love, tragedy and hope centers around a homeless tramp whom meets and instantly falls in love with a beautiful, albeit blind, flower seller."
     },
     {
-        "id":"8",
+        "id":"12477",
         "location": "",
         "image": "https://m.media-amazon.com/images/M/MV5BZmY2NjUzNDQtNTgxNC00M2Q4LTljOWQtMjNjNDBjNWUxNmJlXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_FMjpg_UX1000_.jpg",
         "hovimg":"https://i.pinimg.com/originals/a9/34/ab/a934ab75b12b4347437d086573ff6455.gif",
@@ -96,7 +96,7 @@ export const animelst = [
         "desc":"This comedic masterpiece finds the iconic Little Tramp (Charlie Chaplin) employed at a state-of-the-art factory where the inescapable machinery completely overwhelms him, and where various mishaps keep getting him sent to prison."
     },
     {
-        "id":"9",
+        "id":"8587",
         "location": "",
         "image": "https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_.jpg",
         "hovimg":"https://media3.giphy.com/media/Lp71UWmAAeJHi/giphy.gif",
@@ -108,7 +108,7 @@ export const animelst = [
         "desc":"A gentle Jewish-Italian waiter, Guido Orefice (Roberto Benigni), meets Dora (Nicoletta Braschi), a pretty schoolteacher, and wins her over with his charm and humor. Eventually they marry and have a son, Giosue (Giorgio Cantarini)."
     },
     {
-        "id":"10",
+        "id":"129",
         "location": "",
         "image": "https://m.media-amazon.com/images/M/MV5BMjlmZmI5MDctNDE2YS00YWE0LWE5ZWItZDBhYWQ0NTcxNWRhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
         "hovimg":"https://media.tenor.com/gH3C2mzmFk4AAAAC/spirited-away-ghibli.gif",

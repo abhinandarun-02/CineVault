@@ -4,6 +4,7 @@ import { RxDividerVertical } from "react-icons/rx";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion"
 
 import ImdbLogo from "../svg-assets/imdb-svgrepo-com.svg"
@@ -15,7 +16,7 @@ const Slideshow = () => {
     const [direction, setDirection] = useState(0)
     const posterArray = [
         {
-            id:"your-name",
+            id:"372058",
             poster: "/your-name-hd-poster.jpg",
             title: "Your Name (Kimi no Na Wa)",
             tagline:"A Makoto Shinkai Film",
@@ -23,7 +24,7 @@ const Slideshow = () => {
             rating:8.4
         },
         {
-            id:"chichore",
+            id:"596650",
             poster:"/chichore-hd-poster.jpg",
             title:"Chhichhore",
             tagline:"A Sajid Nadiawala Film",
@@ -31,7 +32,7 @@ const Slideshow = () => {
             rating:8.3
         },
         {
-            id:'the-shining',
+            id:'694',
             poster: "/shining-hd-poster.jpg",
             title: "The Shining",
             tagline:"Based on an Original Novel by Stephen King",
@@ -119,7 +120,7 @@ const Slideshow = () => {
                     </div>
                 </div>
                 <br></br>
-                <button className="more-details h-[12%] w-[20%] rounded-2xl bg-[#8685ef] active:scale-75 2xl:text-2xl">Details</button>
+                <Link href={`/movie/${posterArray[index].id}`} className="more-details h-[12%] w-[20%] flex items-center justify-center rounded-2xl bg-[#8685ef] active:scale-75 2xl:text-2xl">Details</Link>
             </div>
             {/* image poster  */}
             <div className="poster-show absolute top-0 left-0 h-[100%] w-[100%] bg-gray-700 rounded-2xl overflow-hidden">
