@@ -219,7 +219,7 @@ const HomepageMobile = ({width, popularMovies, latestMovies, topMovies, upcoming
         </div>
       </div>
       {/* Most Popular Movies */}
-      <div className="popular-movies my-5 flex flex-col h-[100%] w-[100%] shrink-0 justify-center">
+      <div className="popular-movies my-5 flex flex-col h-[100%] w-[100%] shrink-0 justify-center pt-5">
         <h1 className="title pl-[5%] text-white text-lg font-bold">
           Most Popular Movies
         </h1>
@@ -236,7 +236,7 @@ const HomepageMobile = ({width, popularMovies, latestMovies, topMovies, upcoming
         </div>
       </div>
       {/* Latest Movies */}
-      <div className="popular-movies my-5 flex flex-col h-[100%] w-[100%] shrink-0 justify-center">
+      <div className="popular-movies my-5 flex flex-col h-[100%] w-[100%] shrink-0 justify-center pt-5">
         <h1 className="title pl-[5%] text-white text-lg font-bold">
           Latest Movies
         </h1>
@@ -253,7 +253,7 @@ const HomepageMobile = ({width, popularMovies, latestMovies, topMovies, upcoming
         </div>
       </div>
         {/* Upcoming Movies */}
-      <div className="popular-movies my-5 flex flex-col h-[100%] w-[100%] shrink-0 justify-center">
+      <div className="popular-movies my-5 flex flex-col h-[100%] w-[100%] shrink-0 justify-center pt-5">
         <h1 className="title pl-[5%] text-white text-lg font-bold">
           Upcoming Movies
         </h1>
