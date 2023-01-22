@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Popup from "reactjs-popup";
-import ReactPlayer from "react-player";
 import Ratings from "@/components/Movie/Ratings";
 import TrailerModal from "../TrailerModal";
 
