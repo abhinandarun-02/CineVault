@@ -1,4 +1,5 @@
 import React, { useState,useEffect } from "react";
+import Link from "next/link";
 import { SiImdb } from "react-icons/si";
 import { GiDirectorChair } from "react-icons/gi";
 import {useRouter} from 'next/router'
@@ -288,7 +289,7 @@ const Genrefunc=()=> {
 
             <div className="flex flex-row overflow-x-scroll scrollbar max-w-[100%] absolute bottom-0">
               {dataset.map((mvlst) => (
-                <div className=" p-3 h-[50%]" key={mvlst.id}>
+                <Link href={`/movie/${mvlst.id}`} className=" p-3 h-[50%]" key={mvlst.id}>
                   <div
                     className={`relative transition-all duration-500 hover:scale-105 border-solid border-black `}
                     onMouseEnter={() => {
@@ -310,7 +311,7 @@ const Genrefunc=()=> {
                       />
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
             </div>

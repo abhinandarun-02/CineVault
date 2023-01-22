@@ -1,6 +1,6 @@
 export const hrrorlst = [
     {
-        "id":"1",
+        "id":"1091",
         "location": "",
         "image": "https://images-na.ssl-images-amazon.com/images/I/61Mf%2B-TcV8L.jpg",
         "hovimg":"https://media.tenor.com/KO1t-ZbEvhwAAAAC/the-thing.gif",
@@ -12,7 +12,7 @@ export const hrrorlst = [
         "desc":"A tragic incident forces Anirudh, a middle-aged man, to take a trip down memory lane and reminisce his college days along with his friends, who were labelled as losers."
     },
     {
-        "id":"2",
+        "id":"538858",
         "location": "",
         "image": "https://st1.bollywoodlife.com/wp-content/uploads/2018/07/tumbbad.png",
         "hovimg":"https://media.tenor.com/GZyVgh0eRfgAAAAd/tumbbad.gif",
@@ -24,7 +24,7 @@ export const hrrorlst = [
         "desc":"This classic story of love, tragedy and hope centers around a homeless tramp whom meets and instantly falls in love with a beautiful, albeit blind, flower seller."
     },
     {
-        "id":"3",
+        "id":"694",
         "location": "",
         "image": "https://alternativemovieposters.com/wp-content/uploads/2022/10/Stella-Ygris_Shining.jpg",
         "hovimg":"https://j.gifs.com/VOm98v.gif",
@@ -36,7 +36,7 @@ export const hrrorlst = [
         "desc":"This comedic masterpiece finds the iconic Little Tramp (Charlie Chaplin) employed at a state-of-the-art factory where the inescapable machinery completely overwhelms him, and where various mishaps keep getting him sent to prison."
     },
     {
-        "id":"4",
+        "id":"539",
         "location": "",
         "image": "https://i.etsystatic.com/21420603/r/il/81fd11/2782690640/il_fullxfull.2782690640_nn4r.jpg",
         "hovimg":"https://media.tenor.com/H2YdMwMzKQ8AAAAC/psycho.gif",
@@ -48,7 +48,7 @@ export const hrrorlst = [
         "desc":"A gentle Jewish-Italian waiter, Guido Orefice (Roberto Benigni), meets Dora (Nicoletta Braschi), a pretty schoolteacher, and wins her over with his charm and humor. Eventually they marry and have a son, Giosue (Giorgio Cantarini)."
     },
     {
-        "id":"5",
+        "id":"348",
         "location": "",
         "image": "https://i.pinimg.com/originals/03/5a/1e/035a1e61ba9e4b1fd767bf8066c6f45e.jpg",
         "hovimg":"https://i.pinimg.com/originals/af/fa/c2/affac24f6893436b051800fd8ded8c25.gif",
@@ -60,7 +60,7 @@ export const hrrorlst = [
         "desc":"Slow-witted Forrest Gump (Tom Hanks) has never thought of himself as disadvantaged, and thanks to his supportive mother (Sally Field), he leads anything but a restricted life."
     },
     {
-        "id":"6",
+        "id":"1091",
         "location": "",
         "image": "https://images-na.ssl-images-amazon.com/images/I/61Mf%2B-TcV8L.jpg",
         "hovimg":"https://media.tenor.com/KO1t-ZbEvhwAAAAC/the-thing.gif",
@@ -72,7 +72,7 @@ export const hrrorlst = [
         "desc":"A tragic incident forces Anirudh, a middle-aged man, to take a trip down memory lane and reminisce his college days along with his friends, who were labelled as losers."
     },
     {
-        "id":"7",
+        "id":"538858",
         "location": "",
         "image": "https://st1.bollywoodlife.com/wp-content/uploads/2018/07/tumbbad.png",
         "hovimg":"https://media.tenor.com/GZyVgh0eRfgAAAAd/tumbbad.gif",
@@ -84,7 +84,7 @@ export const hrrorlst = [
         "desc":"This classic story of love, tragedy and hope centers around a homeless tramp whom meets and instantly falls in love with a beautiful, albeit blind, flower seller."
     },
     {
-        "id":"8",
+        "id":"694",
         "location": "",
         "image": "https://alternativemovieposters.com/wp-content/uploads/2022/10/Stella-Ygris_Shining.jpg",
         "hovimg":"https://j.gifs.com/VOm98v.gif",
@@ -96,7 +96,7 @@ export const hrrorlst = [
         "desc":"This comedic masterpiece finds the iconic Little Tramp (Charlie Chaplin) employed at a state-of-the-art factory where the inescapable machinery completely overwhelms him, and where various mishaps keep getting him sent to prison."
     },
     {
-        "id":"9",
+        "id":"539",
         "location": "",
         "image": "https://i.etsystatic.com/21420603/r/il/81fd11/2782690640/il_fullxfull.2782690640_nn4r.jpg",
         "hovimg":"https://media.tenor.com/H2YdMwMzKQ8AAAAC/psycho.gif",
@@ -108,7 +108,7 @@ export const hrrorlst = [
         "desc":"A gentle Jewish-Italian waiter, Guido Orefice (Roberto Benigni), meets Dora (Nicoletta Braschi), a pretty schoolteacher, and wins her over with his charm and humor. Eventually they marry and have a son, Giosue (Giorgio Cantarini)."
     },
     {
-        "id":"10",
+        "id":"348",
         "location": "",
         "image": "https://i.pinimg.com/originals/03/5a/1e/035a1e61ba9e4b1fd767bf8066c6f45e.jpg",
         "hovimg":"https://i.pinimg.com/originals/af/fa/c2/affac24f6893436b051800fd8ded8c25.gif",
