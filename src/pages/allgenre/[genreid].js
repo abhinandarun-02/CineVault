@@ -159,6 +159,7 @@ const Genrefunc=()=> {
                       key={genre.id}
                       onClick={() => {
                         router.push(genre.link);
+                        setMenu(false);
                       }}
                     >
                       {returnSVG(genre.id)}
@@ -279,7 +280,7 @@ const Genrefunc=()=> {
               </div>
               )}
               {hover && (
-                <button style={{backgroundColor: "#00C896"}} className="mt-2 bg-black hover:scale-105 text-white font-bold hover:text-white p-3 border border-black hover:border-transparent rounded-2xl sm:h-[12%] sm:w-[20%] w-[50%] 2xl:text-xl">
+                <button style={{backgroundColor: "#00C896"}} className=" bg-black hover:scale-105 text-white font-bold hover:text-white p-2 border border-black hover:border-transparent rounded-2xl sm:w-[20%] w-[50%]">
                   Learn More
                 </button>
               )}
