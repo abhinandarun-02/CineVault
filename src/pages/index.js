@@ -1,4 +1,5 @@
 import axios from "axios";
+import Head from "next/head";
 import HomepageDesktop from '@/components/Homepage-dekstop'
 import HomepageMobile from '@/components/Homepage-mobile';
 import useWindowSize from '@/Hooks/useWindowSize'
@@ -9,6 +10,10 @@ export default function Home({popularMovies, latestMovies,topMovies, upcomingMov
   const size = useWindowSize();
   return (
     <div className='bg-[#252525]'>
+      <Head>
+        <title>{"CineVault : Watch Movies Online"}</title>
+        <link rel="icon" href="/vault.png" />
+      </Head>
       {size.width>=1000 && <HomepageDesktop popularMovies={popularMovies} latestMovies={latestMovies} topMovies={topMovies} upcomingMovies={upcomingMovies}/>}
       {size.width<1000 && <HomepageMobile width={size.width} popularMovies={popularMovies} latestMovies={latestMovies} topMovies={topMovies} upcomingMovies={upcomingMovies}/>}
     </div>
