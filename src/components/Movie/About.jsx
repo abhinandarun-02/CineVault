@@ -1,17 +1,23 @@
 import React, { useState } from "react";
 import Ratings from "@/components/Movie/Ratings";
 import TrailerModal from "../TrailerModal";
+import { info } from "@/data/thething";
 
 function About({ data }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const index = data.videos.results.findIndex(
-    (element) => element.type === "Trailer"
-  );
+var results = info;
+if (data.videos.results === undefined)
+  results = info
+else
+  results = data.videos.results
+const index = results.findIndex(
+  (element) => element.type === "Trailer"
+);
 
-  const languageNames = new Intl.DisplayNames(["en"], {
-    type: "language",
-  });
+const languageNames = new Intl.DisplayNames(["en"], {
+  type: "language",
+});
 
   return (
     <section className="section-2 px-4">

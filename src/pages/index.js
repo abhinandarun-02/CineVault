@@ -2,8 +2,6 @@ import axios from "axios";
 import HomepageDesktop from '@/components/Homepage-dekstop'
 import HomepageMobile from '@/components/Homepage-mobile';
 import useWindowSize from '@/Hooks/useWindowSize'
-import { useEffect,useState } from 'react';
-import Movie from "@/pages/movie";
 import { server } from "config";
 
 
