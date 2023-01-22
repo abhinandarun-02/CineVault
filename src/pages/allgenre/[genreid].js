@@ -101,11 +101,11 @@ const Genrefunc=()=> {
   return (
     <div>
     <div
-      className=" min-h-screen bg-cover duration-500 relative "
-      style={{ backgroundImage: `url(${bgImage})` }}
+      className=" h-screen bg-cover duration-500 relative overflow-hidden"
+      style={{ backgroundImage: `url(${bgImage})`}}
     >
-      <div className="genredes bg-gradient-to-t from-black     ">
-        <div className="genredes bg-gradient-to-r from-black ">
+      <div className=" h-screen bg-gradient-to-t from-black     ">
+        <div className="  bg-gradient-to-r from-black ">
         {/* Menu-Bar */}
       <AnimatePresence>
         {menu && (
@@ -251,12 +251,19 @@ const Genrefunc=()=> {
           }}
         />
       </div>
-          <div className="grid grid-rows-2 h-screen grid-flow-col gap-6 ">
+          <div className="grid grid-rows-2 h-screen grid-flow-col  ">
             <div className=" pl-5 p-15 text-left duration-500 w-full sm:w-2/4  self-center">
             <div className="flex flex-col mt-10 sm:mt-8 sm:ml-12 sm:gap-3 gap-1">
-              <div className="sm:text-7xl text-4xl text-white font-bold font-carterfont ">
+            <AnimatePresence>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.4 }}
+               className="sm:text-7xl text-4xl text-white font-bold font-carterfont ">
                 {titleDet}
-              </div>
+              </motion.div>
+              </AnimatePresence>
               <div className=" sm:text-3xl text-lg text-white font-normal  pt-3">
                 {yearDet}
               </div>
