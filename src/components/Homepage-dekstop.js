@@ -21,7 +21,7 @@ function returnSVG(id){
     }
   }
 
-const HomepageDesktop = ({movies}) => {
+const HomepageDesktop = ({popularMovies, latestMovies, topMovies, upcomingMovies}) => {
       const router  = useRouter()
 return ( 
     <div className='parent-homepage  h-[100vh] w-[100%] grid-row-1 text-[#686262] bg-[#252525] '>
@@ -91,13 +91,46 @@ return (
                 <Slideshow />
             </div>
             <br></br>
-    {/* Popular Movies */}
-            <div className="popular-movies  flex flex-col h-[65%] min-h-[500px] max-h-[520px] w-[100%] shrink-0 justify-center">
-                <h1 className="title pl-[5%] text-white text-lg font-bold">Most Popular Movies</h1>
-                <br></br>
-                <div className="cards h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 overflow-x-scroll scrollbar">
+    {/* Top Rated Movies */}
+            <div className="movie-row flex flex-col h-[65%] min-h-[500px] max-h-[520px] w-[100%] shrink-0 justify-center">
+                <h1 className="title pl-[5%] text-white text-lg font-bold">Top Rated Movies</h1>
+                <div className="cards h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 overflow-x-scroll scrollbar-thin">
                     {
-                    movies.results.map((movie)=>(
+                    topMovies.results.map((movie)=>(
+                        <Card name={movie.original_title} rating={movie.vote_average} img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} key={movie.id} id={movie.id} />
+                    ))
+                    }
+                </div>
+            </div>
+    {/* Most Popular Movies */}
+            <div className="movie-row mt-10 flex flex-col h-[65%] min-h-[500px] max-h-[520px] w-[100%] shrink-0 justify-center">
+                <h1 className="title pl-[5%] text-white text-lg font-bold">Most Popular Movies</h1>
+
+                <div className="cards h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 overflow-x-scroll scrollbar-thin">
+                    {
+                    popularMovies.results.map((movie)=>(
+                        <Card name={movie.original_title} rating={movie.vote_average} img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} key={movie.id} id={movie.id} />
+                    ))
+                    }
+                </div>
+            </div>
+    {/* Latest Movies */}
+            <div className="movie-row mt-10 flex flex-col h-[65%] min-h-[500px] max-h-[520px] w-[100%] shrink-0 justify-center">
+                <h1 className="title pl-[5%] text-white text-lg font-bold">Latest Movies</h1>
+                <div className="cards h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 overflow-x-scroll scrollbar-thin">
+                    {
+                    latestMovies.results.slice(3).reverse().map((movie)=>(
+                        <Card name={movie.original_title} rating={movie.vote_average} img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} key={movie.id} id={movie.id} />
+                    ))
+                    }
+                </div>
+            </div>
+    {/* Upcoming Movies */}
+            <div className="movie-row mt-10 flex flex-col h-[65%] min-h-[500px] max-h-[520px] w-[100%] shrink-0 justify-center">
+                <h1 className="title pl-[5%] text-white text-lg font-bold">Upcoming Movies</h1>
+                <div className="cards h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 overflow-x-scroll scrollbar-thin">
+                    {
+                    upcomingMovies.results.map((movie)=>(
                         <Card name={movie.original_title} rating={movie.vote_average} img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} key={movie.id} id={movie.id} />
                     ))
                     }

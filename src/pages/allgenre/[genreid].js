@@ -77,7 +77,6 @@ const Genrefunc=()=> {
         if(genreid=='1'){
             setDataset(hrrorlst);
             selectinit(hrrorlst[0])
-            console.log(hrrorlst);
         }
         else if(genreid=='2'){
             setDataset(romcomlst);
