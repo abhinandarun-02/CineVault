@@ -61,6 +61,7 @@ const Movie=({ movie })=>{
     <div className="">
       <Head>
         <title>{`${(movie.title || movie.original_name)} (${movie.release_date.substring(0, 4)}) | CineVault : Watch Movies Online`}</title>
+        <link rel="icon" href="/vault.png" />
       </Head>
       {/* Menu-Bar */}
       <AnimatePresence>
