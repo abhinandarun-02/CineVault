@@ -301,7 +301,7 @@ const Genrefunc=()=> {
 
             <div className="flex flex-row overflow-x-scroll scrollbar max-w-[100%] items-start min-h-[250px] md:min-h-[350px]">
               {dataset.map((mvlst) => (
-                <Link href={`/movie/${mvlst.id}`} className=" p-3 h-[50%]" key={mvlst.id}>
+                <Link href={`/movie/${mvlst.id}`} className=" p-3 h-[50%]" key={mvlst.key}>
                   <div
                     className={`relative transition-all duration-500 hover:scale-105 border-solid border-black `}
                     onMouseEnter={() => {
