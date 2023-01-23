@@ -276,8 +276,8 @@ const Genrefunc=()=> {
               
               {hover && (
                 <div className="flex flex-row pt-3 ">
-                  <SiImdb className="text-white sm:text-6xl text-3xl 2xl:text-2xl lg:text-xl md:text-xl"  />
-                <div className=" sm:text-3xl text-lg 2xl:text-2xl lg:text-xl md:text-xl text-white font-normal  ml-5">
+                  <SiImdb className="text-white sm:text-3xl text-3xl 2xl:text-4xl lg:text-xl md:text-4xl xl:text-3xl"  />
+                <div className=" sm:text-xl text-lg 2xl:text-2xl lg:text-xl md:text-xl text-white font-normal  ml-5">
                     {descDet}
                 </div>
                 </div>
@@ -285,14 +285,14 @@ const Genrefunc=()=> {
               
               {hover && (
                 <div className="flex flex-row pt-3 ">
-                <GiDirectorChair className="text-white sm:text-6xl text-3xl 2xl:text-2xl lg:text-xl md:text-xl"/>
-              <div className=" sm:text-3xl text-lg 2xl:text-2xl lg:text-xl md:text-xl text-white font-normal  ml-5">
+                <GiDirectorChair className="text-white sm:text-3xl text-3xl 2xl:text-4xl lg:text-xl md:text-4xl xl:text-3xl"/>
+              <div className=" sm:text-xl text-lg 2xl:text-2xl lg:text-xl md:text-xl text-white font-normal  ml-5">
                   {dirctr}
               </div>
               </div>
               )}
               {hover && (
-                <Link href={`/movie/${movieId}`} style={{backgroundColor: "#00C896"}} className="flex items-start justify-center bg-black hover:scale-105 text-white font-bold hover:text-white p-2 border border-black hover:border-transparent rounded-2xl lg:w-[20%] sm:w-[50%] w-[150px]">
+                <Link href={`/movie/${movieId}`} style={{backgroundColor: "#00C896"}} className="flex items-start justify-center bg-black hover:scale-105 text-white font-bold hover:text-white p-2 border border-black hover:border-transparent rounded-2xl h-[12%] w-[10%] min-w-[140px]">
                   Learn More
                 </Link>
               )}
