@@ -20,6 +20,7 @@ import {
   BsInstagram,
   BsPerson,
   BsPeople,
+  BsGithub
 } from "react-icons/bs";
 
 import Dracula from "../../svg-assets/dracula-svgrepo-com.svg";
@@ -104,6 +105,14 @@ const Movie=({ movie })=>{
                   className="hover:text-[#8685ef] transition-colors duration-300 cursor-pointer"
                 >
                   <BsInstagram />
+                </a>
+                <a
+                  href="https://github.com/abhinandarun-02/CineVault"
+                  target={"_blank"}
+                  rel="noreferrer"
+                  className="ml-[7%] hover:text-[#8685ef] transition-colors duration-300 cursor-pointer"
+                >
+                  <BsGithub />
                 </a>
               </div>
               <div className="genre-details">

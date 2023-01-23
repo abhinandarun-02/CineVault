@@ -1,6 +1,6 @@
 import { genreArray } from '@/data/genre'
 import { useRouter } from 'next/router'
-import { BsSearch, BsPeople, BsPerson, BsInstagram, BsFacebook } from "react-icons/bs"
+import { BsSearch, BsPeople, BsPerson, BsInstagram, BsFacebook,BsGithub } from "react-icons/bs"
 import Slideshow from '@/components/Slideshow'
 import Card from '@/components/Card'
 
@@ -36,6 +36,9 @@ return (
             </a>
             <a href="https://instagram.com/petrichor.iitpkd?igshid=MDM4ZDc5MmU=" target={"_blank"} rel="noreferrer" className='hover:text-[#8685ef] transition-colors duration-300 cursor-pointer'>
                 <BsInstagram />
+            </a>
+            <a href="https://github.com/abhinandarun-02/CineVault" target={"_blank"} rel="noreferrer" className='ml-[7%] hover:text-[#8685ef] transition-colors duration-300 cursor-pointer'>
+                <BsGithub />
             </a>
             </div>
             <div className="genre-details">

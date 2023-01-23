@@ -4,6 +4,7 @@ import {
   BsInstagram,
   BsPerson,
   BsPeople,
+  BsGithub
 } from "react-icons/bs";
 import { AiOutlineClose, AiFillCloseCircle } from "react-icons/ai";
 import { BiMenu } from "react-icons/bi";
@@ -87,6 +88,14 @@ const HomepageMobile = ({width, popularMovies, latestMovies, topMovies, upcoming
                   className="hover:text-[#8685ef] transition-colors duration-300 cursor-pointer"
                 >
                   <BsInstagram />
+                </a>
+                <a
+                  href="https://github.com/abhinandarun-02/CineVault"
+                  target={"_blank"}
+                  rel="noreferrer"
+                  className="ml-[7%] hover:text-[#8685ef] transition-colors duration-300 cursor-pointer"
+                >
+                  <BsGithub />
                 </a>
               </div>
               <div className="genre-details">
