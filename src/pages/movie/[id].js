@@ -7,6 +7,7 @@ import Poster from "@/components/Movie/Poster";
 import About from "@/components/Movie/About";
 import CastCrew from "@/components/Movie/Cast";
 import Details from "@/components/Movie/Details";
+import Loading from "@/components/Loading";
 import {useRouter} from 'next/router'
 import React, { useState,useEffect } from "react";
 import useWindowSize from '@/Hooks/useWindowSize'
@@ -50,6 +51,7 @@ function returnSVG(id) {
 }
 
 const Movie=({ movie })=>{
+  const [loading,setLoading] = useState(false)
   const [menu, setMenu] = useState(false);
   const width = useWindowSize().width;
   const router=useRouter()
@@ -64,6 +66,7 @@ const Movie=({ movie })=>{
         <title>{`${(movie.title || movie.original_name)} (${movie.release_date.substring(0, 4)}) | CineVault : Watch Movies Online`}</title>
         <link rel="icon" href="/vault.png" />
       </Head>
+      {loading && <Loading/>}
       {/* Menu-Bar */}
       <AnimatePresence>
         {menu && (
@@ -86,7 +89,7 @@ const Movie=({ movie })=>{
                   src="/cinevault-hd-logo-green.png"
                   alt="logo-for-website"
                   className="logo-image h-[100px] w-[150px]"
-                  onClick = {()=>{router.push("/")}}
+                  onClick = {()=>{router.push("/");setLoading(true)}}
                 />
               </div>
               <div className="socials flex flex-row mt-[25px] justify-center">
@@ -126,6 +129,7 @@ const Movie=({ movie })=>{
                       key={genre.id}
                       onClick={() => {
                         router.push(genre.link);
+                        setLoading(true)
                       }}
                     >
                       {returnSVG(genre.id)}
@@ -143,6 +147,7 @@ const Movie=({ movie })=>{
                     className="genre-category pt-5 pb-5 w-[100%] items-center justify-items-center border-r-[#8685ef] hover:border-r-4 hover:bg-[#353555] transition-all duration-300 cursor-pointer"
                     onClick={() => {
                       router.push("/errorPage");
+                      setLoading(true)
                     }}
                   >
                     <BsPerson />
@@ -152,6 +157,7 @@ const Movie=({ movie })=>{
                     className="genre-category pt-5 pb-5 w-[100%] items-center justify-items-center border-r-[#8685ef] hover:border-r-4 hover:bg-[#353555] transition-all duration-300 cursor-pointer"
                     onClick={() => {
                       router.push("/errorPage");
+                      setLoading(true)
                     }}
                   >
                     <BsPeople />
@@ -187,7 +193,7 @@ const Movie=({ movie })=>{
           src="/cinevault-hd-logo-green.png"
           alt="cinevault-logo"
           className="logo ml-[10%] max-h-[50px] cursor-pointer"
-          onClick = {()=>{router.push("/")}}
+          onClick = {()=>{router.push("/");setLoading(true)}}
         />
         <div className="search-bar-mobile relative bg-[#393939] w-[90%] h-[100%] max-h-[50px] rounded-3xl justify-center">
           <div className="user-profile rounded-3xl h-[100%] w-[100%] flex justify-center items-center bg-[#21877e]">

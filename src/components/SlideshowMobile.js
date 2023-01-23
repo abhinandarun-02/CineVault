@@ -10,7 +10,7 @@ import Link from "next/link";
 import ImdbLogo from "../svg-assets/imdb-svgrepo-com.svg"
 
 
-const SlideshowMobile = () => {
+const SlideshowMobile = ({onClick}) => {
 
     const [index,setIndex] = useState(0)
     const [direction, setDirection] = useState(0)
@@ -120,7 +120,7 @@ const SlideshowMobile = () => {
                     </div>
                 </div>
                 <br></br>
-                <Link href={`/movie/${posterArray[index].id}`} className="more-details h-[12%] w-[30%] max-w-[90px] flex items-center justify-center rounded-lg bg-[#8685ef] active:scale-75 sm:text-lg text-sm">Details</Link>
+                <Link href={`/movie/${posterArray[index].id}`} className="more-details h-[12%] w-[30%] max-w-[90px] flex items-center justify-center rounded-lg bg-[#8685ef] active:scale-75 sm:text-lg text-sm" onClick={onClick}>Details</Link>
             </div>
             {/* image poster  */}
             <div className="poster-show absolute top-0 left-0 h-[100%] w-[100%] bg-gray-700 rounded-2xl overflow-hidden">
@@ -139,7 +139,6 @@ const SlideshowMobile = () => {
                         exit="center"
                         transition={{
                             x: { type: "spring", stiffness: 300, damping: 30 },
-                            opacity: { duration: 0.2 }
                         }}
                     />
                     </AnimatePresence>

@@ -14,6 +14,7 @@ import Card from "./Card";
 import { genreArray } from "@/data/genre.js";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router.js";
+import Loading from "./Loading.js";
 
 import Dracula from "../svg-assets/dracula-svgrepo-com.svg";
 import Love from "../svg-assets/valentines-valentines-day-svgrepo-com.svg";
@@ -43,11 +44,16 @@ function returnSVG(id) {
 
 const HomepageMobile = ({width, popularMovies, latestMovies, topMovies, upcomingMovies}) => {
   const router = useRouter();
+  const [loading,setLoading] = useState(false)
 
   // Menu Required States
   const [menu, setMenu] = useState(false);
   return (
     <div className="homepage-mobile box-borders h-[100vh] bg-[#252525] overflow-y-scroll scrollbar">
+      {/*Loading  */}
+      {
+        loading && <Loading/>
+      }
       {/* Menu-Bar */}
       <AnimatePresence>
         {menu && (
@@ -109,6 +115,7 @@ const HomepageMobile = ({width, popularMovies, latestMovies, topMovies, upcoming
                       key={genre.id}
                       onClick={() => {
                         router.push(genre.link);
+                        setLoading(true)
                       }}
                     >
                       {returnSVG(genre.id)}
@@ -126,6 +133,7 @@ const HomepageMobile = ({width, popularMovies, latestMovies, topMovies, upcoming
                     className="genre-category pt-5 pb-5 w-[100%] items-center justify-items-center border-r-[#8685ef] hover:border-r-4 hover:bg-[#353555] transition-all duration-300 cursor-pointer"
                     onClick={() => {
                       router.push("/errorPage");
+                      setLoading(true)
                     }}
                   >
                     <BsPerson />
@@ -135,6 +143,7 @@ const HomepageMobile = ({width, popularMovies, latestMovies, topMovies, upcoming
                     className="genre-category pt-5 pb-5 w-[100%] items-center justify-items-center border-r-[#8685ef] hover:border-r-4 hover:bg-[#353555] transition-all duration-300 cursor-pointer"
                     onClick={() => {
                       router.push("/errorPage");
+                      setLoading(true)
                     }}
                   >
                     <BsPeople />
@@ -207,7 +216,7 @@ const HomepageMobile = ({width, popularMovies, latestMovies, topMovies, upcoming
         <h1 className="title text-white pl-[5%] mt-[3%] text-lg font-bold mb-[3%]">
           Featured Movies
         </h1>
-        <SlideshowMobile />
+        <SlideshowMobile onClick={()=>{setLoading(true)}}/>
       </div>
 
       {/* Top Rated Movies */}
@@ -223,6 +232,7 @@ const HomepageMobile = ({width, popularMovies, latestMovies, topMovies, upcoming
               img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} 
               key={movie.id} 
               id={movie.id}
+              onClick={()=>{setLoading(true)}}
             />
           ))}
         </div>
@@ -240,6 +250,7 @@ const HomepageMobile = ({width, popularMovies, latestMovies, topMovies, upcoming
               img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} 
               key={movie.id} 
               id={movie.id}
+              onClick={()=>{setLoading(true)}}
             />
           ))}
         </div>
@@ -257,6 +268,7 @@ const HomepageMobile = ({width, popularMovies, latestMovies, topMovies, upcoming
               img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} 
               key={movie.id} 
               id={movie.id}
+              onClick={()=>{setLoading(true)}}
             />
           ))}
         </div>
@@ -274,6 +286,7 @@ const HomepageMobile = ({width, popularMovies, latestMovies, topMovies, upcoming
               img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} 
               key={movie.id} 
               id={movie.id}
+              onClick={()=>{setLoading(true)}}
             />
           ))}
         </div>

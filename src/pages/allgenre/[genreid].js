@@ -27,6 +27,7 @@ import Love from "../../svg-assets/valentines-valentines-day-svgrepo-com.svg";
 import Anime from "../../svg-assets/anime-and-manga-svgrepo-com.svg";
 import Detetive from "../../svg-assets/detective-face-svgrepo-com.svg";
 import Action from "../../svg-assets/criminal-heist-svgrepo-com.svg";
+import Loading from "@/components/Loading";
 
 //sm:border-solid sm:border-[3px] sm:border-[#21877e]
 function returnSVG(id) {
@@ -53,7 +54,8 @@ const Genrefunc=()=> {
     const genreid=router.query.genreid
     const width = useWindowSize().width;
     const [dataset,setDataset] = useState([]);
- 
+    const [loading,setLoading] = useState(false)
+
     const [hover, setHover] = useState(false);
     const [bgImage, setBgImage] = useState(
       "https://png.pngtree.com/thumb_back/fw800/background/20220215/pngtree-retro-video-camera-poster-of-film-and-television-festival-image_926071.jpg"
@@ -73,6 +75,7 @@ const Genrefunc=()=> {
                    setdescDet(mvlst.imdb);
                    setyearDet(mvlst.year);
                    setHover(true);
+      setMovieId(mvlst.id)
 }
     useEffect(() => {
         // Update the document title using the browser API
@@ -98,10 +101,17 @@ const Genrefunc=()=> {
         }
       },[genreid]);
      
-    
+    const numberGenre = (genre) =>{
+      if(genre === "horror") return 1
+      else if(genre === "romcom") return 2
+      else if(genre === "mystery") return 3
+      else if(genre === "anime") return 4
+      else if(genre === "action") return 5
+    }
     
   return (
     <div className={menu===true?"bg-black overflow-hidden":"bg-black"}>
+    {loading && <Loading/>}
     <div
       className=" min-h-screen bg-cover duration-500 relative"
       style={{ backgroundImage: `url(${bgImage})` }}
@@ -130,7 +140,7 @@ const Genrefunc=()=> {
                   src="/cinevault-hd-logo-green.png"
                   alt="logo-for-website"
                   className="logo-image h-[100px] w-[150px]"
-                  onClick = {()=>{router.push("/")}}
+                  onClick = {()=>{router.push("/");setLoading(true);}}
                 />
               </div>
               <div className="socials flex flex-row mt-[25px] justify-center">
@@ -170,7 +180,7 @@ const Genrefunc=()=> {
                       key={genre.id}
                       onClick={() => {
                         router.push(genre.link);
-                        setMenu(false);
+                        setMenu(false);                        
                       }}
                     >
                       {returnSVG(genre.id)}
@@ -188,6 +198,7 @@ const Genrefunc=()=> {
                     className="genre-category pt-5 pb-5 w-[100%] items-center justify-items-center border-r-[#8685ef] hover:border-r-4 hover:bg-[#353555] transition-all duration-300 cursor-pointer"
                     onClick={() => {
                       router.push("/errorPage");
+                      setLoading(true)
                     }}
                   >
                     <BsPerson />
@@ -197,6 +208,7 @@ const Genrefunc=()=> {
                     className="genre-category pt-5 pb-5 w-[100%] items-center justify-items-center border-r-[#8685ef] hover:border-r-4 hover:bg-[#353555] transition-all duration-300 cursor-pointer"
                     onClick={() => {
                       router.push("/errorPage");
+                      setLoading(true)
                     }}
                   >
                     <BsPeople />
@@ -232,7 +244,7 @@ const Genrefunc=()=> {
           src="/cinevault-hd-logo-green.png"
           alt="cinevault-logo"
           className="logo ml-[10%] max-h-[50px] cursor-pointer"
-          onClick = {()=>{router.push("/")}}
+          onClick = {()=>{router.push("/");setLoading(true)}}
         />
         <div className="search-bar-mobile relative bg-[#393939] w-[90%] h-[100%] max-h-[50px] rounded-3xl justify-center">
           <div className="user-profile rounded-3xl h-[100%] w-[100%] flex justify-center items-center bg-[#21877e]">
@@ -292,7 +304,7 @@ const Genrefunc=()=> {
               </div>
               )}
               {hover && (
-                <Link href={`/movie/${movieId}`} style={{backgroundColor: "#00C896"}} className="flex items-start justify-center bg-black hover:scale-105 text-white font-bold hover:text-white p-2 border border-black hover:border-transparent rounded-2xl h-[12%] w-[10%] min-w-[140px]">
+                <Link href={`/movie/${movieId}`} onClick={()=>{setLoading(true)}} style={{backgroundColor: "#00C896"}} className="flex items-start justify-center bg-black hover:scale-105 text-white font-bold hover:text-white p-2 border border-black hover:border-transparent rounded-2xl h-[12%] w-[10%] min-w-[140px] transition-all duration-500">
                   Learn More
                 </Link>
               )}
@@ -315,9 +327,8 @@ const Genrefunc=()=> {
                     }}
                     onMouseLeave={() => setHover(true)}
                   >
-                    <div className=" overflow-hidden shadow-xl sm:h-[300px] sm:w-[200px] h-[200px] w-[150px]">
+                    <div className=" overflow-hidden shadow-xl sm:h-[300px] sm:w-[200px] h-[200px] w-[150px]" onClick={()=>{setLoading(true)}}>
                       <img
-                        
                         className="rounded-lg sm:rounded-xl h-[100%] object-cover "
                         src={mvlst.image}
                         alt="Card Image"

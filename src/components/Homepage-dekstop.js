@@ -1,8 +1,10 @@
 import { genreArray } from '@/data/genre'
 import { useRouter } from 'next/router'
 import { BsSearch, BsPeople, BsPerson, BsInstagram, BsFacebook,BsGithub } from "react-icons/bs"
+import { useState } from 'react'
 import Slideshow from '@/components/Slideshow'
 import Card from '@/components/Card'
+import Loading from './Loading'
 
 import Dracula  from '../svg-assets/dracula-svgrepo-com.svg'
 import Love from '../svg-assets/valentines-valentines-day-svgrepo-com.svg'
@@ -23,8 +25,13 @@ function returnSVG(id){
 
 const HomepageDesktop = ({popularMovies, latestMovies, topMovies, upcomingMovies}) => {
       const router  = useRouter()
+      const [loading,setLoading] = useState(false)
 return ( 
     <div className='parent-homepage  h-[100vh] w-[100%] grid-row-1 text-[#686262] bg-[#252525] '>
+{/* Loading screen */}
+        {
+            loading && <Loading />
+        }
   {/* Sidebar */}
         <div className="sidebar bg-[#111111] pt-[30px] pb-[10px] col-span-1 flex flex-col text-lg h-[100%] min-w-[40%] overflow-y-scroll scrollbar-thin">
             <div className="logo flex flex-col h-[20%] w-[100%] bg-transparent justify-center items-center p-10">
@@ -49,7 +56,10 @@ return (
                 {
                     genreArray.map((genre) => (
                     <div className="genre-category animate glow delay-2 pt-5 pb-5 w-[100%] z-[2] items-center justify-items-center border-r-[#8685ef] hover:border-r-4 hover:bg-[#353555] transition-all duration-300 cursor-pointer" key={genre.id}
-                        onClick = {()=>{router.push(genre.link)}}
+                        onClick = {()=>{
+                            router.push(genre.link)
+                            setLoading(true)
+                        }}
                     >
                         {returnSVG(genre.id)}
                         {genre.message}
@@ -63,11 +73,19 @@ return (
                     <h1>Social</h1>
                 </div>
                 <div className="genre-select flex flex-col h-[35%] w-[100%] bg-transparent justify-start items-center animate glow delay-2">
-                    <div className="genre-category pt-5 pb-5 w-[100%] items-center justify-items-center border-r-[#8685ef] hover:border-r-4 hover:bg-[#353555] transition-all duration-300 cursor-pointer"  onClick = {()=>{router.push("/errorPage")}}>
+                    <div className="genre-category pt-5 pb-5 w-[100%] items-center justify-items-center border-r-[#8685ef] hover:border-r-4 hover:bg-[#353555] transition-all duration-300 cursor-pointer"  onClick = {()=>{
+                        router.push("/errorPage")
+                        setLoading(true)
+                    }
+                    }>
                         <BsPerson />
                         Friends
                     </div>
-                    <div className="genre-category pt-5 pb-5 w-[100%] items-center justify-items-center border-r-[#8685ef] hover:border-r-4 hover:bg-[#353555] transition-all duration-300 cursor-pointer" onClick = {()=>{router.push("/errorPage")}}>
+                    <div className="genre-category pt-5 pb-5 w-[100%] items-center justify-items-center border-r-[#8685ef] hover:border-r-4 hover:bg-[#353555] transition-all duration-300 cursor-pointer" onClick = {()=>{
+                        router.push("/errorPage")
+                        setLoading(true)
+                    }
+                    }>
                         <BsPeople />
                         Party
                     </div>
@@ -91,7 +109,7 @@ return (
     {/* Slideshow */}
             <h1 className="title text-white pl-[5%] mt-[3%] text-lg font-bold">Featured Movies</h1>
             <div className="slide-show flex justify-center items-center h-[40%] min-h-[400px] w-[100%] animate glow delay-2">
-                <Slideshow />
+                <Slideshow onClick={()=>{setLoading(true)}}/>
             </div>
             <br></br>
     {/* Top Rated Movies */}
@@ -100,7 +118,7 @@ return (
                 <div className="cards h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 overflow-x-scroll scrollbar-thin">
                     {
                     topMovies.results.map((movie)=>(
-                        <Card name={movie.title} rating={movie.vote_average} img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} key={movie.id} id={movie.id} />
+                        <Card name={movie.title} rating={movie.vote_average} img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} key={movie.id} id={movie.id} onClick={()=>{setLoading(true)}}/>
                     ))
                     }
                 </div>
@@ -112,7 +130,7 @@ return (
                 <div className="cards h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 overflow-x-scroll scrollbar-thin">
                     {
                     popularMovies.results.map((movie)=>(
-                        <Card name={movie.title} rating={movie.vote_average} img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} key={movie.id} id={movie.id} />
+                        <Card name={movie.title} rating={movie.vote_average} img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} key={movie.id} id={movie.id} onClick={()=>{setLoading(true)}}/>
                     ))
                     }
                 </div>
@@ -123,7 +141,7 @@ return (
                 <div className="cards h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 overflow-x-scroll scrollbar-thin">
                     {
                     latestMovies.results.slice(3).reverse().map((movie)=>(
-                        <Card name={movie.title} rating={movie.vote_average} img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} key={movie.id} id={movie.id} />
+                        <Card name={movie.title} rating={movie.vote_average} img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} key={movie.id} id={movie.id} onClick={()=>{setLoading(true)}}/>
                     ))
                     }
                 </div>
@@ -134,7 +152,7 @@ return (
                 <div className="cards h-[100%] pl-[5%] w-[100%] pt-[2%] animate glow delay-3 overflow-x-scroll scrollbar-thin">
                     {
                     upcomingMovies.results.map((movie)=>(
-                        <Card name={movie.title} rating={movie.vote_average} img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} key={movie.id} id={movie.id} />
+                        <Card name={movie.title} rating={movie.vote_average} img={"https://image.tmdb.org/t/p/w500/"+movie.poster_path} key={movie.id} id={movie.id} onClick={()=>{setLoading(true)}}/>
                     ))
                     }
                 </div>

@@ -38,6 +38,16 @@ li {
   list-style: none;
 }
 
+/*Loading screen*/
+.loader {
+  border: 16px solid #454e50;
+  border-radius: 50%;
+  border-top: 16px solid #00c896;
+  width: 120px;
+  height: 120px;
+}
+
+
 /* HOMEPAGE DESKTOP */
 
 .parent-homepage{

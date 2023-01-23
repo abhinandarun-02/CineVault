@@ -33,7 +33,7 @@ function Details({ data }) {
             Runtime
           </span>
           <div className="ans grow">
-            <p className="length w-full text-lg text-[#b6b8b9]">
+            <p className="length w-full text-lg text-[#b6b8b9] mb-4">
               {data.runtime + " min"}
             </p>
           </div>

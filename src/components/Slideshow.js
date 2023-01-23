@@ -10,7 +10,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import ImdbLogo from "../svg-assets/imdb-svgrepo-com.svg"
 
 
-const Slideshow = () => {
+const Slideshow = ({onClick}) => {
 
     const [index,setIndex] = useState(0)
     const [direction, setDirection] = useState(0)
@@ -120,7 +120,7 @@ const Slideshow = () => {
                     </div>
                 </div>
                 <br></br>
-                <Link href={`/movie/${posterArray[index].id}`} className="more-details h-[12%] w-[20%] flex items-center justify-center rounded-2xl bg-[#8685ef] active:scale-75 2xl:text-2xl">Details</Link>
+                <Link href={`/movie/${posterArray[index].id}`} className="more-details h-[12%] w-[20%] flex items-center justify-center rounded-2xl bg-[#8685ef] active:scale-75 2xl:text-2xl" onClick={onClick}>Details</Link>
             </div>
             {/* image poster  */}
             <div className="poster-show absolute top-0 left-0 h-[100%] w-[100%] bg-gray-700 rounded-2xl overflow-hidden">
